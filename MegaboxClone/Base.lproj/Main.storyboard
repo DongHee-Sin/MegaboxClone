@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7xY-K4-45T">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -8,23 +8,206 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--홈-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MegaboxClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oBv-Ux-jS8" userLabel="Header">
+                                <rect key="frame" x="0.0" y="44" width="414" height="63.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="매가박스 로고" translatesAutoresizingMaskIntoConstraints="NO" id="u8N-LF-AiK">
+                                        <rect key="frame" x="145" y="16.5" width="124" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="u8N-LF-AiK" secondAttribute="height" multiplier="4:1" id="TZl-uv-GCU"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barcode.viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UR8-lN-gS8">
+                                        <rect key="frame" x="15" y="20" width="25" height="23.5"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="UR8-lN-gS8" secondAttribute="height" multiplier="1:1" id="wfJ-Uc-xef"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7B8-30-btF">
+                                        <rect key="frame" x="310.5" y="0.0" width="103.5" height="63.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBQ-Ku-h0o">
+                                                <rect key="frame" x="0.0" y="0.0" width="52" height="63.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MFEED" translatesAutoresizingMaskIntoConstraints="NO" id="SsE-Ev-gpN">
+                                                        <rect key="frame" x="2.5" y="8.5" width="46.5" height="46.5"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="SsE-Ev-gpN" secondAttribute="height" multiplier="1:1" id="gtY-fK-ISh"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="SsE-Ev-gpN" firstAttribute="width" secondItem="mBQ-Ku-h0o" secondAttribute="width" multiplier="0.9" id="6i0-3z-DYN"/>
+                                                    <constraint firstItem="SsE-Ev-gpN" firstAttribute="centerX" secondItem="mBQ-Ku-h0o" secondAttribute="centerX" id="Uyl-h5-zI8"/>
+                                                    <constraint firstItem="SsE-Ev-gpN" firstAttribute="centerY" secondItem="mBQ-Ku-h0o" secondAttribute="centerY" id="pZh-5y-XKK"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2O-Co-Cyr">
+                                                <rect key="frame" x="52" y="0.0" width="51.5" height="63.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text.justify" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="m1i-rG-hSv">
+                                                        <rect key="frame" x="12.5" y="20.5" width="26" height="22.5"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="m1i-rG-hSv" secondAttribute="height" multiplier="1:1" id="aT2-4A-Mrb"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="m1i-rG-hSv" firstAttribute="centerX" secondItem="S2O-Co-Cyr" secondAttribute="centerX" id="HVo-B4-MRb"/>
+                                                    <constraint firstItem="m1i-rG-hSv" firstAttribute="width" secondItem="S2O-Co-Cyr" secondAttribute="width" multiplier="0.5" id="WFW-yv-tR6"/>
+                                                    <constraint firstItem="m1i-rG-hSv" firstAttribute="centerY" secondItem="S2O-Co-Cyr" secondAttribute="centerY" id="jAb-lc-irt"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="7B8-30-btF" firstAttribute="width" secondItem="oBv-Ux-jS8" secondAttribute="width" multiplier="0.25" id="1iq-M5-bnG"/>
+                                    <constraint firstAttribute="trailing" secondItem="7B8-30-btF" secondAttribute="trailing" id="BCJ-L8-JZN"/>
+                                    <constraint firstItem="UR8-lN-gS8" firstAttribute="leading" secondItem="oBv-Ux-jS8" secondAttribute="leading" constant="15" id="D3y-lW-Y5G"/>
+                                    <constraint firstItem="u8N-LF-AiK" firstAttribute="centerX" secondItem="oBv-Ux-jS8" secondAttribute="centerX" id="Nv3-KV-XqH"/>
+                                    <constraint firstItem="u8N-LF-AiK" firstAttribute="centerY" secondItem="oBv-Ux-jS8" secondAttribute="centerY" id="QK5-tK-DHb"/>
+                                    <constraint firstItem="7B8-30-btF" firstAttribute="height" secondItem="oBv-Ux-jS8" secondAttribute="height" id="SLp-RP-iyX"/>
+                                    <constraint firstItem="u8N-LF-AiK" firstAttribute="width" secondItem="oBv-Ux-jS8" secondAttribute="width" multiplier="0.3" id="TsJ-m6-uc2"/>
+                                    <constraint firstAttribute="width" secondItem="oBv-Ux-jS8" secondAttribute="height" multiplier="6.5:1" id="csn-hw-mRx"/>
+                                    <constraint firstItem="7B8-30-btF" firstAttribute="centerY" secondItem="oBv-Ux-jS8" secondAttribute="centerY" id="j6e-cA-KBM"/>
+                                    <constraint firstItem="UR8-lN-gS8" firstAttribute="centerY" secondItem="oBv-Ux-jS8" secondAttribute="centerY" id="weX-9d-JNQ"/>
+                                    <constraint firstItem="UR8-lN-gS8" firstAttribute="width" secondItem="oBv-Ux-jS8" secondAttribute="width" multiplier="0.06" id="wfN-nh-Cbz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oBv-Ux-jS8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1eN-d1-fuW"/>
+                            <constraint firstItem="oBv-Ux-jS8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8PG-ZN-7oP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oBv-Ux-jS8" secondAttribute="trailing" id="rEZ-Vi-nL2"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="홈" image="house" catalog="system" selectedImage="house.fill" id="svG-T9-AJb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="98"/>
+            <point key="canvasLocation" x="865" y="98"/>
+        </scene>
+        <!--스토어-->
+        <scene sceneID="bfW-EX-LNq">
+            <objects>
+                <viewController id="Kf6-HZ-8Ka" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iul-mQ-A5u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="LGE-TE-55S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="스토어" image="case" catalog="system" selectedImage="case.fill" id="wmA-FH-WOp"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SlK-wi-u7E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1654" y="98"/>
+        </scene>
+        <!--예매-->
+        <scene sceneID="9cG-wD-x5C">
+            <objects>
+                <viewController id="3ku-y7-rsI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S9p-HT-IWQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3qk-c1-dlp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="예매" image="ticket" catalog="system" selectedImage="ticket.fill" id="xQN-rZ-jrl"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wyy-1a-HnP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2474" y="98"/>
+        </scene>
+        <!--모바일오더-->
+        <scene sceneID="nw0-IQ-3Fa">
+            <objects>
+                <viewController id="bAL-ER-EhB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9x7-sB-rat">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="JmO-bL-hWD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="모바일오더" image="iphone.circle" catalog="system" selectedImage="iphone.circle.fill" id="Ndo-BD-L3Q"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lrd-Ww-tgr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3294" y="98"/>
+        </scene>
+        <!--MY-->
+        <scene sceneID="OSD-Zi-qaD">
+            <objects>
+                <viewController id="pJy-HT-FK4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OQf-Vn-Y18">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vfE-5n-Qol"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="MY" image="person" catalog="system" selectedImage="person.fill" id="Hf3-kf-zjm"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uSW-dY-FUf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4114" y="98"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="wH2-7A-pyg">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="7xY-K4-45T" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zL6-13-Uax">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.38823529410000002" green="0.69411764710000001" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="sKM-dV-zG0"/>
+                        <segue destination="Kf6-HZ-8Ka" kind="relationship" relationship="viewControllers" id="ykL-Dx-gRh"/>
+                        <segue destination="3ku-y7-rsI" kind="relationship" relationship="viewControllers" id="UlR-BN-9Pw"/>
+                        <segue destination="bAL-ER-EhB" kind="relationship" relationship="viewControllers" id="dHj-pL-4Ro"/>
+                        <segue destination="pJy-HT-FK4" kind="relationship" relationship="viewControllers" id="r2Y-xp-jF0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qss-RJ-6U1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2475" y="-701"/>
         </scene>
     </scenes>
     <resources>
+        <image name="MFEED" width="157" height="74"/>
+        <image name="barcode.viewfinder" catalog="system" width="128" height="115"/>
+        <image name="case" catalog="system" width="128" height="100"/>
+        <image name="case.fill" catalog="system" width="128" height="100"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="iphone.circle" catalog="system" width="128" height="121"/>
+        <image name="iphone.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="text.justify" catalog="system" width="128" height="100"/>
+        <image name="ticket" catalog="system" width="128" height="84"/>
+        <image name="ticket.fill" catalog="system" width="128" height="84"/>
+        <image name="매가박스 로고" width="642" height="160"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
