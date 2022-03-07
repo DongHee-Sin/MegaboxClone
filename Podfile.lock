@@ -1,16 +1,24 @@
 PODS:
   - Alamofire (5.5.0)
+  - Pageboy (3.6.2)
+  - Tabman (2.11.1):
+    - Pageboy (~> 3.6.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.5)
+  - Tabman (~> 2.9)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Pageboy
+    - Tabman
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
+  Tabman: 792ac76fd1ec95af175c93db880a3c47cabedc91
 
-PODFILE CHECKSUM: 1956004c6e495cab27614619b86a81192a920a36
+PODFILE CHECKSUM: f48f303491e2f9df94f3ebe206f79af377a86b51
 
 COCOAPODS: 1.11.2

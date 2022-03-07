@@ -7,9 +7,10 @@
 
 import UIKit
 import Alamofire
+import Tabman
 
 
-class ViewController: UIViewController {
+class ViewController: TabmanViewController {
     
     // MARK: - Model 연결
     var eventListModel: EventList = EventList()
