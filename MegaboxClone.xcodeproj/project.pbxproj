@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		231C830FC8F622083474D3A7 /* Pods_MegaboxClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421621177413B7A275974091 /* Pods_MegaboxClone.framework */; };
 		D0A30F7D27D5E48A00E243E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A30F7C27D5E48A00E243E1 /* AppDelegate.swift */; };
 		D0A30F7F27D5E48A00E243E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A30F7E27D5E48A00E243E1 /* SceneDelegate.swift */; };
 		D0A30F8127D5E48A00E243E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A30F8027D5E48A00E243E1 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		421621177413B7A275974091 /* Pods_MegaboxClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MegaboxClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C9B6B048F1D06E04AD60E82 /* Pods-MegaboxClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MegaboxClone.debug.xcconfig"; path = "Target Support Files/Pods-MegaboxClone/Pods-MegaboxClone.debug.xcconfig"; sourceTree = "<group>"; };
 		D0A30F7927D5E48A00E243E1 /* MegaboxClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MegaboxClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A30F7C27D5E48A00E243E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0A30F7E27D5E48A00E243E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		D0A30F8527D5E48B00E243E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0A30F8827D5E48B00E243E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0A30F8A27D5E48B00E243E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D127DA986FA9DDAF92DB1B40 /* Pods-MegaboxClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MegaboxClone.release.xcconfig"; path = "Target Support Files/Pods-MegaboxClone/Pods-MegaboxClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				231C830FC8F622083474D3A7 /* Pods_MegaboxClone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF12B71B85F588B048C55A5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				421621177413B7A275974091 /* Pods_MegaboxClone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D0A30F7027D5E48A00E243E1 = {
 			isa = PBXGroup;
 			children = (
 				D0A30F7B27D5E48A00E243E1 /* MegaboxClone */,
 				D0A30F7A27D5E48A00E243E1 /* Products */,
+				F043A01022ADBB08B8EF2C39 /* Pods */,
+				AF12B71B85F588B048C55A5A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +71,7 @@
 		D0A30F7B27D5E48A00E243E1 /* MegaboxClone */ = {
 			isa = PBXGroup;
 			children = (
-				D0A30F7C27D5E48A00E243E1 /* AppDelegate.swift */,
-				D0A30F7E27D5E48A00E243E1 /* SceneDelegate.swift */,
+				D0A30F9027D5E50400E243E1 /* App */,
 				D0A30F8027D5E48A00E243E1 /* ViewController.swift */,
 				D0A30F8227D5E48A00E243E1 /* Main.storyboard */,
 				D0A30F8527D5E48B00E243E1 /* Assets.xcassets */,
@@ -67,6 +81,25 @@
 			path = MegaboxClone;
 			sourceTree = "<group>";
 		};
+		D0A30F9027D5E50400E243E1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D0A30F7C27D5E48A00E243E1 /* AppDelegate.swift */,
+				D0A30F7E27D5E48A00E243E1 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F043A01022ADBB08B8EF2C39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C9B6B048F1D06E04AD60E82 /* Pods-MegaboxClone.debug.xcconfig */,
+				D127DA986FA9DDAF92DB1B40 /* Pods-MegaboxClone.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0A30F8D27D5E48B00E243E1 /* Build configuration list for PBXNativeTarget "MegaboxClone" */;
 			buildPhases = (
+				E5387E659A4DD9A62111F019 /* [CP] Check Pods Manifest.lock */,
 				D0A30F7527D5E48A00E243E1 /* Sources */,
 				D0A30F7627D5E48A00E243E1 /* Frameworks */,
 				D0A30F7727D5E48A00E243E1 /* Resources */,
+				4AD74D9014CAB58CE1E64C38 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +167,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4AD74D9014CAB58CE1E64C38 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MegaboxClone/Pods-MegaboxClone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MegaboxClone/Pods-MegaboxClone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MegaboxClone/Pods-MegaboxClone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5387E659A4DD9A62111F019 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MegaboxClone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D0A30F7527D5E48A00E243E1 /* Sources */ = {
@@ -284,6 +361,7 @@
 		};
 		D0A30F8E27D5E48B00E243E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C9B6B048F1D06E04AD60E82 /* Pods-MegaboxClone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +389,7 @@
 		};
 		D0A30F8F27D5E48B00E243E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D127DA986FA9DDAF92DB1B40 /* Pods-MegaboxClone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
