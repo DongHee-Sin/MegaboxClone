@@ -14,6 +14,9 @@
 		D0A30F8427D5E48A00E243E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A30F8227D5E48A00E243E1 /* Main.storyboard */; };
 		D0A30F8627D5E48B00E243E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0A30F8527D5E48B00E243E1 /* Assets.xcassets */; };
 		D0A30F8927D5E48B00E243E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A30F8727D5E48B00E243E1 /* LaunchScreen.storyboard */; };
+		D0A30F9327D5F11900E243E1 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A30F9127D5F11900E243E1 /* EventCollectionViewCell.swift */; };
+		D0A30F9427D5F11900E243E1 /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0A30F9227D5F11900E243E1 /* EventCollectionViewCell.xib */; };
+		D0A30F9727D5F54C00E243E1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A30F9627D5F54C00E243E1 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		D0A30F8527D5E48B00E243E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0A30F8827D5E48B00E243E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0A30F8A27D5E48B00E243E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0A30F9127D5F11900E243E1 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		D0A30F9227D5F11900E243E1 /* EventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCollectionViewCell.xib; sourceTree = "<group>"; };
+		D0A30F9627D5F54C00E243E1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D127DA986FA9DDAF92DB1B40 /* Pods-MegaboxClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MegaboxClone.release.xcconfig"; path = "Target Support Files/Pods-MegaboxClone/Pods-MegaboxClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +83,8 @@
 				D0A30F8527D5E48B00E243E1 /* Assets.xcassets */,
 				D0A30F8727D5E48B00E243E1 /* LaunchScreen.storyboard */,
 				D0A30F8A27D5E48B00E243E1 /* Info.plist */,
+				D0A30F9527D5F11F00E243E1 /* Cell */,
+				D0A30F9627D5F54C00E243E1 /* Model.swift */,
 			);
 			path = MegaboxClone;
 			sourceTree = "<group>";
@@ -90,13 +98,21 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		D0A30F9527D5F11F00E243E1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D0A30F9127D5F11900E243E1 /* EventCollectionViewCell.swift */,
+				D0A30F9227D5F11900E243E1 /* EventCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		F043A01022ADBB08B8EF2C39 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				7C9B6B048F1D06E04AD60E82 /* Pods-MegaboxClone.debug.xcconfig */,
 				D127DA986FA9DDAF92DB1B40 /* Pods-MegaboxClone.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -161,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0A30F8927D5E48B00E243E1 /* LaunchScreen.storyboard in Resources */,
+				D0A30F9427D5F11900E243E1 /* EventCollectionViewCell.xib in Resources */,
 				D0A30F8627D5E48B00E243E1 /* Assets.xcassets in Resources */,
 				D0A30F8427D5E48A00E243E1 /* Main.storyboard in Resources */,
 			);
@@ -215,7 +232,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0A30F9727D5F54C00E243E1 /* Model.swift in Sources */,
 				D0A30F8127D5E48A00E243E1 /* ViewController.swift in Sources */,
+				D0A30F9327D5F11900E243E1 /* EventCollectionViewCell.swift in Sources */,
 				D0A30F7D27D5E48A00E243E1 /* AppDelegate.swift in Sources */,
 				D0A30F7F27D5E48A00E243E1 /* SceneDelegate.swift in Sources */,
 			);

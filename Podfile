@@ -8,5 +8,6 @@ target 'MegaboxClone' do
   # Pods for MegaboxClone
 
 pod 'Alamofire', '~> 5.5'
+pod 'Tabman', '~> 2.12'
 
 end
