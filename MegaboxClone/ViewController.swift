@@ -8,9 +8,17 @@
 import UIKit
 import Alamofire
 import Tabman
+import Pageboy
 
 
 class ViewController: TabmanViewController {
+    
+    // MARK: - API 데이터
+    var boxOfficeData: [dailyBoxOfficeList]?
+    
+    
+    
+    
     
     // MARK: - Model 연결
     var eventListModel: EventList = EventList()
@@ -35,10 +43,49 @@ class ViewController: TabmanViewController {
         eventCollectionView.dataSource = self
         eventCollectionView.register(UINib(nibName: "EventCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "EventCollectionViewCell")
         eventCollectionView.collectionViewLayout = createCompositionalLayout()
+
+        // 박스오피스 정보 가져와서 boxOfficeData 변수에 값을 입력하는 함수
+        MovieRequest().getMovieData(self)
     }
-
-
+    
+    
+    // MARK: - View Will Appear
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
 }
+
+
+// MARK: - API 데이터 받아오기
+//extension ViewController {
+//    func getMovieData() {
+//        let url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=b4d2c860bdd937f0186339b3082437a1&targetDt=20220301"
+//
+//        let params: Parameters = [
+//            "key": "b4d2c860bdd937f0186339b3082437a1",
+//            "targetDt": 20220301
+//        ]
+//
+//        // HTTP Method: Get
+//        AF.request(url,
+//                   method: .get,
+//                   parameters: params,
+//                   headers: nil)
+//            .responseDecodable(of: MovieResponse.self) { response in
+//                switch response.result {
+//                case .success(let response):
+//                    print("박스오피스 정보 가져오기 성공")
+//                    self.boxOfficeData = response.boxOfficeResult.dailyBoxOfficeList
+//
+//                case .failure(let error):
+//                    print("실패 = \(error.localizedDescription)")
+//                }
+//            }
+//
+//    }
+//}
+
+
 
 
 
@@ -94,7 +141,7 @@ extension ViewController {
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 
             // 아이템 간의 간격 설정
-            item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+            item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 10, bottom: 2, trailing: 10)
                 
             // 그룹 사이즈
             let groubSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.9), heightDimension: .fractionalWidth(1/3))
@@ -112,7 +159,7 @@ extension ViewController {
             section.orthogonalScrollingBehavior = .continuous
                 
             // 섹션에 대한 간격 설정
-            //section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
+//            section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
                 
             return section
         }
@@ -120,3 +167,12 @@ extension ViewController {
         return layout
     }
 }
+
+
+
+// MARK: - TapMan 프로토콜 채택
+//extension ViewController: PageboyViewControllerDataSource, TMBarDataSource {
+//
+//
+//
+//}

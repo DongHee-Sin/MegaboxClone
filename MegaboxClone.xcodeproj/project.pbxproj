@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		231C830FC8F622083474D3A7 /* Pods_MegaboxClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421621177413B7A275974091 /* Pods_MegaboxClone.framework */; };
+		D073C64727D6322D00900D04 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D073C64627D6322D00900D04 /* MovieResponse.swift */; };
+		D073C64927D633F000900D04 /* MovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D073C64827D633F000900D04 /* MovieRequest.swift */; };
 		D0A30F7D27D5E48A00E243E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A30F7C27D5E48A00E243E1 /* AppDelegate.swift */; };
 		D0A30F7F27D5E48A00E243E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A30F7E27D5E48A00E243E1 /* SceneDelegate.swift */; };
 		D0A30F8127D5E48A00E243E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A30F8027D5E48A00E243E1 /* ViewController.swift */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		421621177413B7A275974091 /* Pods_MegaboxClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MegaboxClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9B6B048F1D06E04AD60E82 /* Pods-MegaboxClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MegaboxClone.debug.xcconfig"; path = "Target Support Files/Pods-MegaboxClone/Pods-MegaboxClone.debug.xcconfig"; sourceTree = "<group>"; };
+		D073C64627D6322D00900D04 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
+		D073C64827D633F000900D04 /* MovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRequest.swift; sourceTree = "<group>"; };
 		D0A30F7927D5E48A00E243E1 /* MegaboxClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MegaboxClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A30F7C27D5E48A00E243E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0A30F7E27D5E48A00E243E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +60,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D073C64A27D6406000900D04 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D073C64627D6322D00900D04 /* MovieResponse.swift */,
+				D073C64827D633F000900D04 /* MovieRequest.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		D0A30F7027D5E48A00E243E1 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +98,7 @@
 				D0A30F8A27D5E48B00E243E1 /* Info.plist */,
 				D0A30F9527D5F11F00E243E1 /* Cell */,
 				D0A30F9627D5F54C00E243E1 /* Model.swift */,
+				D073C64A27D6406000900D04 /* API */,
 			);
 			path = MegaboxClone;
 			sourceTree = "<group>";
@@ -235,7 +249,9 @@
 				D0A30F9727D5F54C00E243E1 /* Model.swift in Sources */,
 				D0A30F8127D5E48A00E243E1 /* ViewController.swift in Sources */,
 				D0A30F9327D5F11900E243E1 /* EventCollectionViewCell.swift in Sources */,
+				D073C64727D6322D00900D04 /* MovieResponse.swift in Sources */,
 				D0A30F7D27D5E48A00E243E1 /* AppDelegate.swift in Sources */,
+				D073C64927D633F000900D04 /* MovieRequest.swift in Sources */,
 				D0A30F7F27D5E48A00E243E1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
