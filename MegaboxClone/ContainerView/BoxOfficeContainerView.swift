@@ -22,10 +22,6 @@ class BoxOfficeContainerView: MainContainerVC {
         boxOfficeCollectionView.dataSource = self
         boxOfficeCollectionView.register(UINib(nibName: "MovieListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MovieListCollectionViewCell")
         boxOfficeCollectionView.collectionViewLayout = createCompositionalLayout()
-        
-//        MovieRequest().getMovieData(completion: { [weak self] (receivedData) in
-//            self?.boxOfficeCollectionView.reloadData()
-//        })
     }
 }
 
@@ -40,6 +36,11 @@ extension BoxOfficeContainerView: UICollectionViewDelegate, UICollectionViewData
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieListCollectionViewCell", for: indexPath) as? MovieListCollectionViewCell else {
             return UICollectionViewCell()
         }
+//        cell.updateCell(MovieRequest.apiData?[0] ?? "")
+        if let data = MovieRequest.apiData?[indexPath.row] {
+            cell.updateCell(data)
+        }
+        
         return cell
     }
     

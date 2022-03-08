@@ -28,7 +28,7 @@ class MainContainerVC: UIViewController {
             item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 5, bottom: 2, trailing: 5)
                 
             // 그룹 사이즈
-            let groubSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.9), heightDimension: .fractionalWidth(1/1.2))
+            let groubSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.9), heightDimension: .fractionalWidth(10/10))
                 
             // 그룹사이즈로 그룹 만들기 (horizontal, vertical 선택 가능)
             let groub = NSCollectionLayoutGroup.horizontal(layoutSize: groubSize, subitem: item, count: 2)
