@@ -159,7 +159,7 @@
                                                             <constraint firstAttribute="width" secondItem="BHZ-u1-XUN" secondAttribute="height" multiplier="1.2:1" id="nGQ-EF-Vh9"/>
                                                         </constraints>
                                                         <connections>
-                                                            <segue destination="U4Q-SV-gFb" kind="embed" id="won-Rm-izh"/>
+                                                            <segue destination="U4Q-SV-gFb" kind="embed" identifier="boxOfficeContainerView" id="won-Rm-izh"/>
                                                         </connections>
                                                     </containerView>
                                                     <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DR7-Nm-3IP" userLabel="상영예정">
@@ -168,7 +168,7 @@
                                                             <constraint firstAttribute="width" secondItem="DR7-Nm-3IP" secondAttribute="height" multiplier="1.2:1" id="ylG-D4-EDb"/>
                                                         </constraints>
                                                         <connections>
-                                                            <segue destination="X0F-PW-6RG" kind="embed" id="TRx-8j-yjH"/>
+                                                            <segue destination="X0F-PW-6RG" kind="embed" identifier="comingSoonContainerView" id="TRx-8j-yjH"/>
                                                         </connections>
                                                     </containerView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p9Z-4K-ixe">

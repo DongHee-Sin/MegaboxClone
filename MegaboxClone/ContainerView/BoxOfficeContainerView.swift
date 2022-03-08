@@ -22,6 +22,10 @@ class BoxOfficeContainerView: MainContainerVC {
         boxOfficeCollectionView.dataSource = self
         boxOfficeCollectionView.register(UINib(nibName: "MovieListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MovieListCollectionViewCell")
         boxOfficeCollectionView.collectionViewLayout = createCompositionalLayout()
+        
+//        MovieRequest().getMovieData(completion: { [weak self] (receivedData) in
+//            self?.boxOfficeCollectionView.reloadData()
+//        })
     }
 }
 

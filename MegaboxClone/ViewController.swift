@@ -18,15 +18,6 @@ class ViewController: UIViewController {
         print(MovieRequest.apiData?.count)
     }
     
-    
-    
-    // MARK: - API 데이터 (지울까..)
-    var boxOfficeData: [dailyBoxOfficeList]?
-    
-    
-    
-    
-    
     // MARK: - Model 연결
     var eventListModel: EventList = EventList()
     var hashTagModel: HashTagList = HashTagList()
@@ -49,6 +40,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var comingSoonContainerView: UIView!
     
     
+    
+    
+    // MARK: - container view 연결
+    var boxOfficeContainerVC: BoxOfficeContainerView?
+    var comingSoonContainerVC: ComingSoonContainerView?
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.destination {
+        case let boxOfficeVC as BoxOfficeContainerView:
+            self.boxOfficeContainerVC = boxOfficeVC
+            
+        case let comingSoonVC as ComingSoonContainerView:
+            self.comingSoonContainerVC = comingSoonVC
+            
+        default:
+            break
+        }
+    }
+    
+    
+    
+    
+    
     // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,8 +78,12 @@ class ViewController: UIViewController {
         
         
         
-        
-        MovieRequest().getMovieData()
+        // API 데이터를 가져오는 함수 (탈출 클로저로 값이 넘어오면 CollectionView 리로드)
+        MovieRequest().getMovieData(completion: { [weak self] in
+            // 여기서 각 컨테이너뷰들의 CollectionView를 리로드 시켜주면 됨!
+            self!.boxOfficeContainerVC?.boxOfficeCollectionView.reloadData()
+            //comingSoonContainerVC --> 여긴 개봉예정 VC 내부에 컬렉션뷰 완성 후 다시 작성
+        })
         
     }
     

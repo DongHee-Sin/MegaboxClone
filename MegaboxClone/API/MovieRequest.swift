@@ -12,7 +12,7 @@ class MovieRequest {
     
     static var apiData: [dailyBoxOfficeList]?
     
-    func getMovieData() {
+    func getMovieData(completion: @escaping()-> ()) {
         print(#function)
         let url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=b4d2c860bdd937f0186339b3082437a1&targetDt=20220301"
         
@@ -21,8 +21,6 @@ class MovieRequest {
             "targetDt": 20220301
         ]
         
-        // 세마포어
-//        let semaphore = DispatchSemaphore(value: 0)
         
         // HTTP Method: Get
         AF.request(url,
@@ -35,7 +33,7 @@ class MovieRequest {
                     print("박스오피스 정보 가져오기 성공")
                     MovieRequest.apiData = response.boxOfficeResult.dailyBoxOfficeList
                     
-//                    semaphore.signal()
+                    completion()
                 
                 case .failure(let error):
                     print("실패 = \(error.localizedDescription)")
