@@ -28,7 +28,6 @@ class BoxOfficeContainerView: MainContainerVC {
 
 extension BoxOfficeContainerView: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(#function)
         return MovieRequest.apiData?.count ?? 3
     }
     
