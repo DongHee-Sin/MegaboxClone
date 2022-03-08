@@ -10,6 +10,9 @@
 		231C830FC8F622083474D3A7 /* Pods_MegaboxClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421621177413B7A275974091 /* Pods_MegaboxClone.framework */; };
 		D073C64727D6322D00900D04 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D073C64627D6322D00900D04 /* MovieResponse.swift */; };
 		D073C64927D633F000900D04 /* MovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D073C64827D633F000900D04 /* MovieRequest.swift */; };
+		D07D4D5A27D709FB00FBE138 /* MainContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07D4D5927D709FB00FBE138 /* MainContainerVC.swift */; };
+		D07D4D5D27D70BF400FBE138 /* MovieListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07D4D5B27D70BF400FBE138 /* MovieListCollectionViewCell.swift */; };
+		D07D4D5E27D70BF400FBE138 /* MovieListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D07D4D5C27D70BF400FBE138 /* MovieListCollectionViewCell.xib */; };
 		D0A30F7D27D5E48A00E243E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A30F7C27D5E48A00E243E1 /* AppDelegate.swift */; };
 		D0A30F7F27D5E48A00E243E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A30F7E27D5E48A00E243E1 /* SceneDelegate.swift */; };
 		D0A30F8127D5E48A00E243E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A30F8027D5E48A00E243E1 /* ViewController.swift */; };
@@ -30,6 +33,9 @@
 		7C9B6B048F1D06E04AD60E82 /* Pods-MegaboxClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MegaboxClone.debug.xcconfig"; path = "Target Support Files/Pods-MegaboxClone/Pods-MegaboxClone.debug.xcconfig"; sourceTree = "<group>"; };
 		D073C64627D6322D00900D04 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		D073C64827D633F000900D04 /* MovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRequest.swift; sourceTree = "<group>"; };
+		D07D4D5927D709FB00FBE138 /* MainContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainerVC.swift; sourceTree = "<group>"; };
+		D07D4D5B27D70BF400FBE138 /* MovieListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCollectionViewCell.swift; sourceTree = "<group>"; };
+		D07D4D5C27D70BF400FBE138 /* MovieListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0A30F7927D5E48A00E243E1 /* MegaboxClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MegaboxClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A30F7C27D5E48A00E243E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0A30F7E27D5E48A00E243E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +81,15 @@
 				D073C64827D633F000900D04 /* MovieRequest.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		D07D4D5F27D70BF700FBE138 /* MovieList */ = {
+			isa = PBXGroup;
+			children = (
+				D07D4D5B27D70BF400FBE138 /* MovieListCollectionViewCell.swift */,
+				D07D4D5C27D70BF400FBE138 /* MovieListCollectionViewCell.xib */,
+			);
+			path = MovieList;
 			sourceTree = "<group>";
 		};
 		D0A30F7027D5E48A00E243E1 = {
@@ -126,6 +141,7 @@
 			children = (
 				D0DE901727D6EAB100AD671E /* Event */,
 				D0DE901C27D6EAE900AD671E /* HashTag */,
+				D07D4D5F27D70BF700FBE138 /* MovieList */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -135,6 +151,7 @@
 			children = (
 				D0DE901227D6DF4600AD671E /* BoxOfficeContainerView.swift */,
 				D0DE901427D6DF6C00AD671E /* ComingSoonContainerView.swift */,
+				D07D4D5927D709FB00FBE138 /* MainContainerVC.swift */,
 			);
 			path = ContainerView;
 			sourceTree = "<group>";
@@ -229,6 +246,7 @@
 				D0DE901B27D6EAE600AD671E /* HashTagCollectionViewCell.xib in Resources */,
 				D0A30F8927D5E48B00E243E1 /* LaunchScreen.storyboard in Resources */,
 				D0A30F9427D5F11900E243E1 /* EventCollectionViewCell.xib in Resources */,
+				D07D4D5E27D70BF400FBE138 /* MovieListCollectionViewCell.xib in Resources */,
 				D0A30F8627D5E48B00E243E1 /* Assets.xcassets in Resources */,
 				D0A30F8427D5E48A00E243E1 /* Main.storyboard in Resources */,
 			);
@@ -284,7 +302,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0A30F9727D5F54C00E243E1 /* Model.swift in Sources */,
+				D07D4D5D27D70BF400FBE138 /* MovieListCollectionViewCell.swift in Sources */,
 				D0DE901A27D6EAE600AD671E /* HashTagCollectionViewCell.swift in Sources */,
+				D07D4D5A27D709FB00FBE138 /* MainContainerVC.swift in Sources */,
 				D0A30F8127D5E48A00E243E1 /* ViewController.swift in Sources */,
 				D0DE901327D6DF4600AD671E /* BoxOfficeContainerView.swift in Sources */,
 				D0A30F9327D5F11900E243E1 /* EventCollectionViewCell.swift in Sources */,

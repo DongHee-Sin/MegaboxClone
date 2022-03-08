@@ -5,11 +5,39 @@
 //  Created by 신동희 on 2022/03/08.
 //
 
-import Foundation
+
 import UIKit
 
-class BoxOfficeContainerView: UIViewController {
+class BoxOfficeContainerView: MainContainerVC {
+    
+    @IBOutlet weak var boxOfficeCollectionView: UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 컬렉션뷰 설정
+        boxOfficeCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        boxOfficeCollectionView.delegate = self
+        boxOfficeCollectionView.dataSource = self
+        boxOfficeCollectionView.register(UINib(nibName: "MovieListCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MovieListCollectionViewCell")
+        boxOfficeCollectionView.collectionViewLayout = createCompositionalLayout()
     }
+}
+
+
+extension BoxOfficeContainerView: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print(#function)
+        return MovieRequest.apiData?.count ?? 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieListCollectionViewCell", for: indexPath) as? MovieListCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        return cell
+    }
+    
+    
 }

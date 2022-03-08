@@ -12,7 +12,15 @@ import Alamofire
 class ViewController: UIViewController {
     
     
-    // MARK: - API 데이터
+    
+    // api값 넘어왔는지 확인할 버튼
+    @IBAction func testButton(_ sender: UIButton) {
+        print(MovieRequest.apiData?.count)
+    }
+    
+    
+    
+    // MARK: - API 데이터 (지울까..)
     var boxOfficeData: [dailyBoxOfficeList]?
     
     
@@ -36,8 +44,9 @@ class ViewController: UIViewController {
     // 영화 리스트 상단 라운딩 주려고 연결
     @IBOutlet weak var movieListUIView: UIView!
     
-    
-    
+    // 컨테이너 뷰
+    @IBOutlet weak var boxOfficeContainerView: UIView!
+    @IBOutlet weak var comingSoonContainerView: UIView!
     
     
     // MARK: - View Did Load
@@ -55,8 +64,8 @@ class ViewController: UIViewController {
         
         
         
-        // 박스오피스 정보 가져와서 boxOfficeData 변수에 값을 입력하는 함수 --> 늦게저장됨;;
-        MovieRequest().getMovieData(self)
+        
+        MovieRequest().getMovieData()
         
     }
     
@@ -75,7 +84,6 @@ class ViewController: UIViewController {
         collectionView.register(UINib(nibName: nib, bundle: nil), forCellWithReuseIdentifier: nib)
     }
 }
-
 
 
 
@@ -158,6 +166,19 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         }
         
         return UICollectionViewCell()
+    }
+    
+    // 셀이 선택되면 컨테이너뷰 isHidden 컨트롤
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("\(indexPath.row)번째 셀 선택되었슴")
+        // 여기서 스위치로 0번째가 눌리면 컨테이너뷰 히든 트루펄스 설정해주면 될듯
+        if indexPath.row == 0 {
+            boxOfficeContainerView.isHidden = false
+            comingSoonContainerView.isHidden = true
+        }else {
+            boxOfficeContainerView.isHidden = true
+            comingSoonContainerView.isHidden = false
+        }
     }
 }
 
