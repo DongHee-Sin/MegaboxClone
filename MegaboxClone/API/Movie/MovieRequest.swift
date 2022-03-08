@@ -13,7 +13,6 @@ class MovieRequest {
     static var apiData: [dailyBoxOfficeList]?
     
     func getMovieData(completion: @escaping()-> ()) {
-        print(#function)
         let url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=b4d2c860bdd937f0186339b3082437a1&targetDt=20220301"
         
         let params: Parameters = [

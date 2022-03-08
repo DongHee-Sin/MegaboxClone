@@ -85,6 +85,12 @@ class ViewController: UIViewController {
             //comingSoonContainerVC --> 여긴 개봉예정 VC 내부에 컬렉션뷰 완성 후 다시 작성
         })
         
+        
+        // 검색 API 테스트
+        SearchRequest().getMovieData(movieTitle: "스파이더맨", completion: {
+            print("여기도 잘 호출되네")
+        })
+        
     }
     
     
