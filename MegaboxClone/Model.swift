@@ -26,3 +26,23 @@ struct EventList {
         return storage[index]
     }
 }
+
+
+
+struct HashTagList {
+    private var storage: [String] = []
+    
+    init() {
+        storage = [
+            "#박스오피스", "#상영예정", "#아카데미", "#단독", "#돌비시네마", "#몬스터짐 아레나", "#클로", "#필소"
+        ]
+    }
+    
+    var count: Int {
+        return storage.count
+    }
+    
+    func getHashTag(_ index: Int) -> String {
+        return storage[index]
+    }
+}

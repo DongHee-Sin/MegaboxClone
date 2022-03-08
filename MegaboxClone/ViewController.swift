@@ -7,11 +7,10 @@
 
 import UIKit
 import Alamofire
-import Tabman
-import Pageboy
 
 
-class ViewController: TabmanViewController {
+class ViewController: UIViewController {
+    
     
     // MARK: - API 데이터
     var boxOfficeData: [dailyBoxOfficeList]?
@@ -22,12 +21,20 @@ class ViewController: TabmanViewController {
     
     // MARK: - Model 연결
     var eventListModel: EventList = EventList()
+    var hashTagModel: HashTagList = HashTagList()
     
     
     
     // MARK: - UI연결
+    
+    // 상단 이벤트 컬렉션뷰
     @IBOutlet weak var eventCollectionView: UICollectionView!
     
+    // 해시태그 컬렉션뷰
+    @IBOutlet weak var hashTagCollectionView: UICollectionView!
+    
+    // 영화 리스트 상단 라운딩 주려고 연결
+    @IBOutlet weak var movieListUIView: UIView!
     
     
     
@@ -37,15 +44,20 @@ class ViewController: TabmanViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 컬렉션뷰 설정
+        // 이벤트 컬렉션뷰 설정
         eventCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        eventCollectionView.delegate = self
-        eventCollectionView.dataSource = self
-        eventCollectionView.register(UINib(nibName: "EventCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "EventCollectionViewCell")
+        collectionViewSetting(eventCollectionView, nib: "EventCollectionViewCell")
         eventCollectionView.collectionViewLayout = createCompositionalLayout()
 
-        // 박스오피스 정보 가져와서 boxOfficeData 변수에 값을 입력하는 함수
+        // 해시태그 컬렉션뷰 설정
+        hashTagCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        collectionViewSetting(hashTagCollectionView, nib: "HashTagCollectionViewCell")
+        
+        
+        
+        // 박스오피스 정보 가져와서 boxOfficeData 변수에 값을 입력하는 함수 --> 늦게저장됨;;
         MovieRequest().getMovieData(self)
+        
     }
     
     
@@ -53,7 +65,24 @@ class ViewController: TabmanViewController {
     override func viewWillAppear(_ animated: Bool) {
         
     }
+    
+    
+    
+    // MARK: - 함수들
+    func collectionViewSetting(_ collectionView: UICollectionView, nib: String) {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(UINib(nibName: nib, bundle: nil), forCellWithReuseIdentifier: nib)
+    }
 }
+
+
+
+
+
+
+
+
 
 
 // MARK: - API 데이터 받아오기
@@ -100,6 +129,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         if collectionView == eventCollectionView {
             return eventListModel.count
         }
+        if collectionView == hashTagCollectionView {
+            return hashTagModel.count
+        }
         
         return 1
     }
@@ -113,6 +145,18 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
             cell.updateCell(eventListModel.getEventData(indexPath.row))
             return cell
         }
+        if collectionView == hashTagCollectionView {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HashTagCollectionViewCell", for: indexPath) as? HashTagCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell.updateCell(hashTagModel.getHashTag(indexPath.row))
+            if indexPath.row == 0 {
+                cell.textLabel.textColor = UIColor.black
+                cell.buttonView.isHidden = false
+            }
+            return cell
+        }
+        
         
         return UICollectionViewCell()
     }
@@ -170,9 +214,9 @@ extension ViewController {
 
 
 
-// MARK: - TapMan 프로토콜 채택
-//extension ViewController: PageboyViewControllerDataSource, TMBarDataSource {
-//
-//
-//
-//}
+// 에러메시지 겁나 나와서 구글링을 통해 복붙한 코드 (나중에 심심하면 찾아봐야...지)
+extension ViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 15, height: collectionView.frame.width/9)
+    }
+}

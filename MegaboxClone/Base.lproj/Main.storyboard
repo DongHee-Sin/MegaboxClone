@@ -127,11 +127,63 @@
                                                     <constraint firstItem="gYn-fP-2ra" firstAttribute="top" secondItem="fNp-z7-TzV" secondAttribute="top" id="eFB-Bs-Pv0"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohX-A1-Nar">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohX-A1-Nar" userLabel="영화 리스트 컬렉션뷰">
                                                 <rect key="frame" x="0.0" y="153.5" width="414" height="455.5"/>
+                                                <subviews>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kNm-dG-zD8">
+                                                        <rect key="frame" x="0.0" y="15" width="414" height="46"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="kNm-dG-zD8" secondAttribute="height" multiplier="9:1" id="s7g-5g-ZeC"/>
+                                                        </constraints>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BL0-3Z-SfD">
+                                                            <size key="itemSize" width="128" height="46"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="a00-Et-la7">
+                                                                <rect key="frame" x="15" y="0.0" width="128" height="46"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZMk-19-ajf">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="46"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                </collectionViewCellContentView>
+                                                            </collectionViewCell>
+                                                        </cells>
+                                                    </collectionView>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHZ-u1-XUN" userLabel="박스오피스">
+                                                        <rect key="frame" x="0.0" y="61" width="414" height="345"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="BHZ-u1-XUN" secondAttribute="height" multiplier="1.2:1" id="nGQ-EF-Vh9"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <segue destination="U4Q-SV-gFb" kind="embed" id="won-Rm-izh"/>
+                                                        </connections>
+                                                    </containerView>
+                                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DR7-Nm-3IP" userLabel="상영예정">
+                                                        <rect key="frame" x="0.0" y="61" width="414" height="345"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="DR7-Nm-3IP" secondAttribute="height" multiplier="1.2:1" id="ylG-D4-EDb"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <segue destination="X0F-PW-6RG" kind="embed" id="TRx-8j-yjH"/>
+                                                        </connections>
+                                                    </containerView>
+                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstItem="BHZ-u1-XUN" firstAttribute="top" secondItem="kNm-dG-zD8" secondAttribute="bottom" id="5Cj-s5-WFj"/>
+                                                    <constraint firstItem="kNm-dG-zD8" firstAttribute="leading" secondItem="ohX-A1-Nar" secondAttribute="leading" id="7Yo-e8-htK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="DR7-Nm-3IP" secondAttribute="trailing" id="AuA-ae-9uU"/>
+                                                    <constraint firstAttribute="trailing" secondItem="kNm-dG-zD8" secondAttribute="trailing" id="CnY-P8-B5i"/>
                                                     <constraint firstAttribute="width" secondItem="ohX-A1-Nar" secondAttribute="height" multiplier="1:1.1" id="MI0-sQ-jXR"/>
+                                                    <constraint firstItem="BHZ-u1-XUN" firstAttribute="leading" secondItem="ohX-A1-Nar" secondAttribute="leading" id="MTd-um-tvn"/>
+                                                    <constraint firstAttribute="trailing" secondItem="BHZ-u1-XUN" secondAttribute="trailing" id="RHD-I0-CzD"/>
+                                                    <constraint firstItem="kNm-dG-zD8" firstAttribute="top" secondItem="ohX-A1-Nar" secondAttribute="top" constant="15" id="Rpw-2T-Q83"/>
+                                                    <constraint firstItem="DR7-Nm-3IP" firstAttribute="top" secondItem="kNm-dG-zD8" secondAttribute="bottom" id="dCg-ld-0yy"/>
+                                                    <constraint firstItem="DR7-Nm-3IP" firstAttribute="leading" secondItem="ohX-A1-Nar" secondAttribute="leading" id="evh-LD-5l4"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -163,11 +215,13 @@
                     <tabBarItem key="tabBarItem" title="홈" image="house" catalog="system" selectedImage="house.fill" id="svG-T9-AJb"/>
                     <connections>
                         <outlet property="eventCollectionView" destination="gYn-fP-2ra" id="wnh-gb-EZA"/>
+                        <outlet property="hashTagCollectionView" destination="kNm-dG-zD8" id="SCv-NJ-43v"/>
+                        <outlet property="movieListUIView" destination="ohX-A1-Nar" id="Eaf-3d-jEi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="863.768115942029" y="97.767857142857139"/>
+            <point key="canvasLocation" x="873.91304347826099" y="97.767857142857139"/>
         </scene>
         <!--스토어-->
         <scene sceneID="bfW-EX-LNq">
@@ -259,6 +313,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qss-RJ-6U1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2475" y="-701"/>
+        </scene>
+        <!--Box Office Container View-->
+        <scene sceneID="wQJ-SC-wuO">
+            <objects>
+                <viewController storyboardIdentifier="BoxOfficeContainerView" id="U4Q-SV-gFb" customClass="BoxOfficeContainerView" customModule="MegaboxClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wvD-kA-VUy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="345"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1번" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXW-7a-jVJ">
+                                <rect key="frame" x="196" y="162" width="23" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="alJ-Kq-sRf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96" y="-38"/>
+        </scene>
+        <!--Coming Soon Container View-->
+        <scene sceneID="VuU-JI-9u8">
+            <objects>
+                <viewController storyboardIdentifier="ComingSoonContainerView" id="X0F-PW-6RG" customClass="ComingSoonContainerView" customModule="MegaboxClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dPS-rF-ra5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="345"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2번" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRa-J6-4zZ">
+                                <rect key="frame" x="186" y="162" width="25" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FXm-44-yNy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96" y="297"/>
         </scene>
     </scenes>
     <resources>

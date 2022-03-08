@@ -19,6 +19,10 @@
 		D0A30F9327D5F11900E243E1 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A30F9127D5F11900E243E1 /* EventCollectionViewCell.swift */; };
 		D0A30F9427D5F11900E243E1 /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0A30F9227D5F11900E243E1 /* EventCollectionViewCell.xib */; };
 		D0A30F9727D5F54C00E243E1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A30F9627D5F54C00E243E1 /* Model.swift */; };
+		D0DE901327D6DF4600AD671E /* BoxOfficeContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE901227D6DF4600AD671E /* BoxOfficeContainerView.swift */; };
+		D0DE901527D6DF6C00AD671E /* ComingSoonContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE901427D6DF6C00AD671E /* ComingSoonContainerView.swift */; };
+		D0DE901A27D6EAE600AD671E /* HashTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE901827D6EAE600AD671E /* HashTagCollectionViewCell.swift */; };
+		D0DE901B27D6EAE600AD671E /* HashTagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0DE901927D6EAE600AD671E /* HashTagCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,10 @@
 		D0A30F9127D5F11900E243E1 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0A30F9227D5F11900E243E1 /* EventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0A30F9627D5F54C00E243E1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D0DE901227D6DF4600AD671E /* BoxOfficeContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeContainerView.swift; sourceTree = "<group>"; };
+		D0DE901427D6DF6C00AD671E /* ComingSoonContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonContainerView.swift; sourceTree = "<group>"; };
+		D0DE901827D6EAE600AD671E /* HashTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagCollectionViewCell.swift; sourceTree = "<group>"; };
+		D0DE901927D6EAE600AD671E /* HashTagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HashTagCollectionViewCell.xib; sourceTree = "<group>"; };
 		D127DA986FA9DDAF92DB1B40 /* Pods-MegaboxClone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MegaboxClone.release.xcconfig"; path = "Target Support Files/Pods-MegaboxClone/Pods-MegaboxClone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +101,7 @@
 				D0A30F9027D5E50400E243E1 /* App */,
 				D0A30F8027D5E48A00E243E1 /* ViewController.swift */,
 				D0A30F8227D5E48A00E243E1 /* Main.storyboard */,
+				D0DE901627D6DF7200AD671E /* ContainerView */,
 				D0A30F8527D5E48B00E243E1 /* Assets.xcassets */,
 				D0A30F8727D5E48B00E243E1 /* LaunchScreen.storyboard */,
 				D0A30F8A27D5E48B00E243E1 /* Info.plist */,
@@ -115,10 +124,37 @@
 		D0A30F9527D5F11F00E243E1 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				D0DE901727D6EAB100AD671E /* Event */,
+				D0DE901C27D6EAE900AD671E /* HashTag */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D0DE901627D6DF7200AD671E /* ContainerView */ = {
+			isa = PBXGroup;
+			children = (
+				D0DE901227D6DF4600AD671E /* BoxOfficeContainerView.swift */,
+				D0DE901427D6DF6C00AD671E /* ComingSoonContainerView.swift */,
+			);
+			path = ContainerView;
+			sourceTree = "<group>";
+		};
+		D0DE901727D6EAB100AD671E /* Event */ = {
+			isa = PBXGroup;
+			children = (
 				D0A30F9127D5F11900E243E1 /* EventCollectionViewCell.swift */,
 				D0A30F9227D5F11900E243E1 /* EventCollectionViewCell.xib */,
 			);
-			path = Cell;
+			path = Event;
+			sourceTree = "<group>";
+		};
+		D0DE901C27D6EAE900AD671E /* HashTag */ = {
+			isa = PBXGroup;
+			children = (
+				D0DE901827D6EAE600AD671E /* HashTagCollectionViewCell.swift */,
+				D0DE901927D6EAE600AD671E /* HashTagCollectionViewCell.xib */,
+			);
+			path = HashTag;
 			sourceTree = "<group>";
 		};
 		F043A01022ADBB08B8EF2C39 /* Pods */ = {
@@ -190,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0DE901B27D6EAE600AD671E /* HashTagCollectionViewCell.xib in Resources */,
 				D0A30F8927D5E48B00E243E1 /* LaunchScreen.storyboard in Resources */,
 				D0A30F9427D5F11900E243E1 /* EventCollectionViewCell.xib in Resources */,
 				D0A30F8627D5E48B00E243E1 /* Assets.xcassets in Resources */,
@@ -247,8 +284,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0A30F9727D5F54C00E243E1 /* Model.swift in Sources */,
+				D0DE901A27D6EAE600AD671E /* HashTagCollectionViewCell.swift in Sources */,
 				D0A30F8127D5E48A00E243E1 /* ViewController.swift in Sources */,
+				D0DE901327D6DF4600AD671E /* BoxOfficeContainerView.swift in Sources */,
 				D0A30F9327D5F11900E243E1 /* EventCollectionViewCell.swift in Sources */,
+				D0DE901527D6DF6C00AD671E /* ComingSoonContainerView.swift in Sources */,
 				D073C64727D6322D00900D04 /* MovieResponse.swift in Sources */,
 				D0A30F7D27D5E48A00E243E1 /* AppDelegate.swift in Sources */,
 				D073C64927D633F000900D04 /* MovieRequest.swift in Sources */,
