@@ -151,17 +151,14 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
             }
             cell.updateCell(hashTagModel.getHashTag(indexPath.row))
             if indexPath.row == 0 {
-                cell.textLabel.textColor = UIColor.black
-                cell.buttonView.isHidden = false
+                cell.isSelected = true
+                collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .init())
             }
             return cell
         }
         
-        
         return UICollectionViewCell()
     }
-    
-    
 }
 
 
