@@ -40,7 +40,8 @@ class SearchRequest {
                     // 여기서 네트워크 문제 발생 -> The request timed out
                     switch response.result {
                     case .success(let response):
-//                        SearchRequest.imageString?.append(response.items[0].image)
+                        // SearchRequest.imageString 배열에 포스터 이미지 값이 순서대로 저장되지 않는 오류 발생
+                        // request time out 에러는 단순 네트워크 오류인듯 -> 시간 지나고 다시 시도하니 잘 작동
                         if (SearchRequest.imageString?.append(response.items[0].image)) == nil {
                             SearchRequest.imageString = [response.items[0].image]
                         }
