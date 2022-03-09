@@ -37,9 +37,13 @@ class SearchRequest {
                        parameters: params,
                        headers: headers)
                 .responseDecodable(of: SearchResponse.self) { response in
+                    // 여기서 네트워크 문제 발생 -> The request timed out
                     switch response.result {
                     case .success(let response):
-                        SearchRequest.imageString?.append(response.items[0].image)
+//                        SearchRequest.imageString?.append(response.items[0].image)
+                        if (SearchRequest.imageString?.append(response.items[0].image)) == nil {
+                            SearchRequest.imageString = [response.items[0].image]
+                        }
                         
                     case .failure(let error):
                         print("검색 실패: \(error.localizedDescription)")

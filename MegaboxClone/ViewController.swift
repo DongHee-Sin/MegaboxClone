@@ -98,6 +98,7 @@ class ViewController: UIViewController {
             
             // 박스오피스가 다 입력되면 forEach문 돌려서 Search해줌 -> 이미지 URL 배열 만들려고
             MovieRequest.apiData?.forEach({
+                // optional배열에 append를 바로 해주면 값이 들어가지 않아서 조건문을 통해 배열이 nil일 경우 값을 직접 할당
                 if (self!.boxOfficeMovieTitles?.append($0.movieNm)) == nil {
                     self!.boxOfficeMovieTitles = [$0.movieNm]
                 }
@@ -131,10 +132,8 @@ class ViewController: UIViewController {
     var boxOfficeMovieTitles: [String]? {
         didSet {
             if boxOfficeMovieTitles?.count == 10 {
-                print("여기 안들어오나")
                 SearchRequest().getMovieData(movieTitles: boxOfficeMovieTitles!, completion: {
                     // 여기서는 SearchRequest()의 static 배열 변수를 사용하여 컨테이너뷰->컬렉션뷰의 이미지뷰 값을 수정
-                    print("이게 실행 안되는거야?")
                     self.boxOfficeContainerVC?.boxOfficeCollectionView.reloadData()
                     //comingSoonContainerVC --> 여긴 개봉예정 VC 내부에 컬렉션뷰 완성 후 다시 작성
                 })
