@@ -33,6 +33,16 @@ class MovieListCollectionViewCell: UICollectionViewCell {
         movieInfo.text = "누적관객수 \(data.audiAcc)명"
     }
     
+    func addImage(_ imageString: String) {
+        DispatchQueue.global().async {
+            let url = URL(string: imageString)
+            let data = try? Data(contentsOf: url!)
+            DispatchQueue.main.async { [weak self] in
+                self!.posterImage.image = UIImage(data: data!)
+            }
+        }
+    }
+    
     
     
     

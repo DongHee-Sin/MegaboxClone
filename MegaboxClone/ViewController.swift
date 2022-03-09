@@ -11,8 +11,6 @@ import Alamofire
 
 class ViewController: UIViewController {
     
-    
-    
     // api값 넘어왔는지 확인할 버튼
     @IBAction func testButton(_ sender: UIButton) {
         print(MovieRequest.apiData?.count)
@@ -75,23 +73,41 @@ class ViewController: UIViewController {
         // 해시태그 컬렉션뷰 설정
         hashTagCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionViewSetting(hashTagCollectionView, nib: "HashTagCollectionViewCell")
+
         
-        
+//        // 박스오피스 영화 제목 가져올 배열
+//        var boxOfficeMovieTitles: [String]? {
+//            didSet {
+//                if boxOfficeMovieTitles?.count == 10 {
+//                    print("여기 안들어오나")
+//                    SearchRequest().getMovieData(movieTitles: boxOfficeMovieTitles!, completion: {
+//                        // 여기서는 SearchRequest()의 static 배열 변수를 사용하여 컨테이너뷰->컬렉션뷰의 이미지뷰 값을 수정
+//                        self.boxOfficeContainerVC?.boxOfficeCollectionView.reloadData()
+//                        //comingSoonContainerVC --> 여긴 개봉예정 VC 내부에 컬렉션뷰 완성 후 다시 작성
+//                    })
+//                }
+//            }
+//        }
         
         // API 데이터를 가져오는 함수 (탈출 클로저로 값이 넘어오면 CollectionView 리로드)
         MovieRequest().getMovieData(completion: { [weak self] in
             // 여기서 각 컨테이너뷰들의 CollectionView를 리로드 시켜주면 됨!
             self!.boxOfficeContainerVC?.boxOfficeCollectionView.reloadData()
             //comingSoonContainerVC --> 여긴 개봉예정 VC 내부에 컬렉션뷰 완성 후 다시 작성
-        })
-        
-        
-        // 검색 API 테스트
-        SearchRequest().getMovieData(movieTitle: "스파이더맨", completion: {
-            print("여기도 잘 호출되네")
+            
+            
+            // 박스오피스가 다 입력되면 forEach문 돌려서 Search해줌 -> 이미지 URL 배열 만들려고
+            MovieRequest.apiData?.forEach({
+                if (self!.boxOfficeMovieTitles?.append($0.movieNm)) == nil {
+                    self!.boxOfficeMovieTitles = [$0.movieNm]
+                }
+                print($0.movieNm)
+            })
+            
         })
         
     }
+    
     
     
     // MARK: - View Will Appear
@@ -106,6 +122,24 @@ class ViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: nib, bundle: nil), forCellWithReuseIdentifier: nib)
+    }
+    
+    
+    
+    // MARK: - 변수들
+    // 박스오피스 영화 제목 가져올 배열
+    var boxOfficeMovieTitles: [String]? {
+        didSet {
+            if boxOfficeMovieTitles?.count == 10 {
+                print("여기 안들어오나")
+                SearchRequest().getMovieData(movieTitles: boxOfficeMovieTitles!, completion: {
+                    // 여기서는 SearchRequest()의 static 배열 변수를 사용하여 컨테이너뷰->컬렉션뷰의 이미지뷰 값을 수정
+                    print("이게 실행 안되는거야?")
+                    self.boxOfficeContainerVC?.boxOfficeCollectionView.reloadData()
+                    //comingSoonContainerVC --> 여긴 개봉예정 VC 내부에 컬렉션뷰 완성 후 다시 작성
+                })
+            }
+        }
     }
 }
 
