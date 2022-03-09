@@ -39,7 +39,7 @@ extension BoxOfficeContainerView: UICollectionViewDelegate, UICollectionViewData
         if let data = MovieRequest.apiData?[indexPath.row] {
             cell.updateCell(data)
         }
-        if let data = SearchRequest.imageString?[indexPath.row] {
+        if let data = SearchRequest.imageString[MovieRequest.apiData?[indexPath.row].movieNm ?? ""] {
             cell.addImage(data)
         }
         

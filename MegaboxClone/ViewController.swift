@@ -75,20 +75,6 @@ class ViewController: UIViewController {
         collectionViewSetting(hashTagCollectionView, nib: "HashTagCollectionViewCell")
 
         
-//        // 박스오피스 영화 제목 가져올 배열
-//        var boxOfficeMovieTitles: [String]? {
-//            didSet {
-//                if boxOfficeMovieTitles?.count == 10 {
-//                    print("여기 안들어오나")
-//                    SearchRequest().getMovieData(movieTitles: boxOfficeMovieTitles!, completion: {
-//                        // 여기서는 SearchRequest()의 static 배열 변수를 사용하여 컨테이너뷰->컬렉션뷰의 이미지뷰 값을 수정
-//                        self.boxOfficeContainerVC?.boxOfficeCollectionView.reloadData()
-//                        //comingSoonContainerVC --> 여긴 개봉예정 VC 내부에 컬렉션뷰 완성 후 다시 작성
-//                    })
-//                }
-//            }
-//        }
-        
         // API 데이터를 가져오는 함수 (탈출 클로저로 값이 넘어오면 CollectionView 리로드)
         MovieRequest().getMovieData(completion: { [weak self] in
             // 여기서 각 컨테이너뷰들의 CollectionView를 리로드 시켜주면 됨!
@@ -96,7 +82,7 @@ class ViewController: UIViewController {
             //comingSoonContainerVC --> 여긴 개봉예정 VC 내부에 컬렉션뷰 완성 후 다시 작성
             
             
-            // 박스오피스가 다 입력되면 forEach문 돌려서 Search해줌 -> 이미지 URL 배열 만들려고
+            // 박스오피스가 다 입력되면 forEach문 boxOfficeMovieTitles 변수에 제목만 저장
             MovieRequest.apiData?.forEach({
                 // optional배열에 append를 바로 해주면 값이 들어가지 않아서 조건문을 통해 배열이 nil일 경우 값을 직접 할당
                 if (self!.boxOfficeMovieTitles?.append($0.movieNm)) == nil {
