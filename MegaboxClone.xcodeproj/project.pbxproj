@@ -10,11 +10,15 @@
 		231C830FC8F622083474D3A7 /* Pods_MegaboxClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421621177413B7A275974091 /* Pods_MegaboxClone.framework */; };
 		D01374CB27D7A5CD00570B79 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01374CA27D7A5CD00570B79 /* SearchResponse.swift */; };
 		D01374CD27D7A5E200570B79 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01374CC27D7A5E200570B79 /* SearchRequest.swift */; };
+		D043C60F27D8EB7C00DC9FD7 /* AfterLoginContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D043C60E27D8EB7C00DC9FD7 /* AfterLoginContainerView.swift */; };
+		D043C61327D8EEA600DC9FD7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D043C61227D8EEA600DC9FD7 /* LoginViewController.swift */; };
+		D0610AD927D8E9E500BD4192 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0610AD827D8E9E500BD4192 /* UserInfoViewController.swift */; };
 		D073C64727D6322D00900D04 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D073C64627D6322D00900D04 /* MovieResponse.swift */; };
 		D073C64927D633F000900D04 /* MovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D073C64827D633F000900D04 /* MovieRequest.swift */; };
 		D07D4D5A27D709FB00FBE138 /* MainContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07D4D5927D709FB00FBE138 /* MainContainerVC.swift */; };
 		D07D4D5D27D70BF400FBE138 /* MovieListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07D4D5B27D70BF400FBE138 /* MovieListCollectionViewCell.swift */; };
 		D07D4D5E27D70BF400FBE138 /* MovieListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D07D4D5C27D70BF400FBE138 /* MovieListCollectionViewCell.xib */; };
+		D08D764227D8E11B00799197 /* BeforeLogInContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08D764127D8E11B00799197 /* BeforeLogInContainerView.swift */; };
 		D0A30F7D27D5E48A00E243E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A30F7C27D5E48A00E243E1 /* AppDelegate.swift */; };
 		D0A30F7F27D5E48A00E243E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A30F7E27D5E48A00E243E1 /* SceneDelegate.swift */; };
 		D0A30F8127D5E48A00E243E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A30F8027D5E48A00E243E1 /* ViewController.swift */; };
@@ -41,11 +45,15 @@
 		7C9B6B048F1D06E04AD60E82 /* Pods-MegaboxClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MegaboxClone.debug.xcconfig"; path = "Target Support Files/Pods-MegaboxClone/Pods-MegaboxClone.debug.xcconfig"; sourceTree = "<group>"; };
 		D01374CA27D7A5CD00570B79 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		D01374CC27D7A5E200570B79 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
+		D043C60E27D8EB7C00DC9FD7 /* AfterLoginContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLoginContainerView.swift; sourceTree = "<group>"; };
+		D043C61227D8EEA600DC9FD7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D0610AD827D8E9E500BD4192 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		D073C64627D6322D00900D04 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		D073C64827D633F000900D04 /* MovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRequest.swift; sourceTree = "<group>"; };
 		D07D4D5927D709FB00FBE138 /* MainContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainerVC.swift; sourceTree = "<group>"; };
 		D07D4D5B27D70BF400FBE138 /* MovieListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCollectionViewCell.swift; sourceTree = "<group>"; };
 		D07D4D5C27D70BF400FBE138 /* MovieListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListCollectionViewCell.xib; sourceTree = "<group>"; };
+		D08D764127D8E11B00799197 /* BeforeLogInContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeLogInContainerView.swift; sourceTree = "<group>"; };
 		D0A30F7927D5E48A00E243E1 /* MegaboxClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MegaboxClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A30F7C27D5E48A00E243E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0A30F7E27D5E48A00E243E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +116,25 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		D043C61027D8EE7900DC9FD7 /* UserInfo View */ = {
+			isa = PBXGroup;
+			children = (
+				D08D764127D8E11B00799197 /* BeforeLogInContainerView.swift */,
+				D043C60E27D8EB7C00DC9FD7 /* AfterLoginContainerView.swift */,
+			);
+			path = "UserInfo View";
+			sourceTree = "<group>";
+		};
+		D043C61127D8EE9800DC9FD7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D0A30F8027D5E48A00E243E1 /* ViewController.swift */,
+				D0610AD827D8E9E500BD4192 /* UserInfoViewController.swift */,
+				D043C61227D8EEA600DC9FD7 /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		D073C64A27D6406000900D04 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,7 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				D0A30F9027D5E50400E243E1 /* App */,
-				D0A30F8027D5E48A00E243E1 /* ViewController.swift */,
+				D043C61127D8EE9800DC9FD7 /* ViewController */,
 				D0A30F8227D5E48A00E243E1 /* Main.storyboard */,
 				D0DE901627D6DF7200AD671E /* ContainerView */,
 				D07D4D5927D709FB00FBE138 /* MainContainerVC.swift */,
@@ -226,6 +253,7 @@
 			children = (
 				D0CCE19827D89B3100B8675C /* 영화 */,
 				D0CCE19B27D89B4F00B8675C /* 이벤트 */,
+				D043C61027D8EE7900DC9FD7 /* UserInfo View */,
 			);
 			path = ContainerView;
 			sourceTree = "<group>";
@@ -377,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D043C60F27D8EB7C00DC9FD7 /* AfterLoginContainerView.swift in Sources */,
 				D01374CB27D7A5CD00570B79 /* SearchResponse.swift in Sources */,
 				D0CCE19A27D89B4B00B8675C /* MovieContainerView.swift in Sources */,
 				D0A30F9727D5F54C00E243E1 /* Model.swift in Sources */,
@@ -386,13 +415,16 @@
 				D07D4D5A27D709FB00FBE138 /* MainContainerVC.swift in Sources */,
 				D0A30F8127D5E48A00E243E1 /* ViewController.swift in Sources */,
 				D0DE901327D6DF4600AD671E /* BoxOfficeContainerView.swift in Sources */,
+				D043C61327D8EEA600DC9FD7 /* LoginViewController.swift in Sources */,
 				D0A30F9327D5F11900E243E1 /* EventCollectionViewCell.swift in Sources */,
 				D0CCE19727D89B2500B8675C /* MegaPickContainerView.swift in Sources */,
 				D0DE901527D6DF6C00AD671E /* ComingSoonContainerView.swift in Sources */,
 				D0D9C10C27D89FAE009ABE8D /* EventListCollectionViewCell.swift in Sources */,
 				D073C64727D6322D00900D04 /* MovieResponse.swift in Sources */,
 				D0A30F7D27D5E48A00E243E1 /* AppDelegate.swift in Sources */,
+				D08D764227D8E11B00799197 /* BeforeLogInContainerView.swift in Sources */,
 				D01374CD27D7A5E200570B79 /* SearchRequest.swift in Sources */,
+				D0610AD927D8E9E500BD4192 /* UserInfoViewController.swift in Sources */,
 				D073C64927D633F000900D04 /* MovieRequest.swift in Sources */,
 				D0A30F7F27D5E48A00E243E1 /* SceneDelegate.swift in Sources */,
 			);

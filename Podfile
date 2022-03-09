@@ -9,5 +9,10 @@ target 'MegaboxClone' do
 
 pod 'Alamofire', '~> 5.5'
 pod 'Tabman', '~> 2.9'
+pod 'KakaoSDKCommon'
+pod 'KakaoSDKAuth'
+pod 'KakaoSDKUser'
+
+
 
 end
