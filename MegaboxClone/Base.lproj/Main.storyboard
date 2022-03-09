@@ -92,7 +92,7 @@
                                 <rect key="frame" x="0.0" y="107.5" width="414" height="705.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XAf-Av-Hv3">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1949"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2171.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNp-z7-TzV" userLabel="이벤트 컬렉션뷰">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="153.5"/>
@@ -326,7 +326,7 @@
                                                     <constraint firstItem="ka1-MJ-Lwc" firstAttribute="leading" secondItem="zaz-Er-IYn" secondAttribute="leading" id="gpr-ue-9uo"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Thk-qB-BDW" userLabel="무대인사 &amp; 시사 Header">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Thk-qB-BDW" userLabel="이벤트 Header">
                                                 <rect key="frame" x="0.0" y="1423" width="414" height="69"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이벤트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbA-cb-MP6">
@@ -451,8 +451,58 @@
                                                     <constraint firstAttribute="trailing" secondItem="Hve-CI-UCT" secondAttribute="trailing" id="mvb-pA-6ni"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m01-hI-wKQ" userLabel="특별관 Header">
+                                                <rect key="frame" x="0.0" y="1949" width="414" height="69"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="특별관" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuC-CQ-OvG">
+                                                        <rect key="frame" x="15" y="29" width="65" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="xuC-CQ-OvG" secondAttribute="bottom" constant="10" id="4Nd-U6-Tmv"/>
+                                                    <constraint firstItem="xuC-CQ-OvG" firstAttribute="leading" secondItem="m01-hI-wKQ" secondAttribute="leading" constant="15" id="obb-HG-zkA"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Lr-7X-wpW" userLabel="특별관 List">
+                                                <rect key="frame" x="0.0" y="2018" width="414" height="153.5"/>
+                                                <subviews>
+                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ixb-Wv-sVh">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="153.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nbh-av-Gpc">
+                                                            <size key="itemSize" width="128" height="128"/>
+                                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        </collectionViewFlowLayout>
+                                                        <cells>
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="K2y-aC-MOY">
+                                                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Sca-d7-JIy">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                </collectionViewCellContentView>
+                                                            </collectionViewCell>
+                                                        </cells>
+                                                    </collectionView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="Ixb-Wv-sVh" firstAttribute="top" secondItem="9Lr-7X-wpW" secondAttribute="top" id="90Y-BJ-hLm"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Ixb-Wv-sVh" secondAttribute="bottom" id="S7e-kN-BNT"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Ixb-Wv-sVh" secondAttribute="trailing" id="hW3-X4-JYO"/>
+                                                    <constraint firstItem="Ixb-Wv-sVh" firstAttribute="leading" secondItem="9Lr-7X-wpW" secondAttribute="leading" id="uyL-9k-Ncy"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="9Lr-7X-wpW" firstAttribute="width" secondItem="9Lr-7X-wpW" secondAttribute="height" multiplier="2.7:1" id="4Ek-bm-ZW7"/>
+                                            <constraint firstItem="m01-hI-wKQ" firstAttribute="width" secondItem="m01-hI-wKQ" secondAttribute="height" multiplier="6:1" id="bPE-e6-lLi"/>
                                             <constraint firstItem="Thk-qB-BDW" firstAttribute="width" secondItem="Thk-qB-BDW" secondAttribute="height" multiplier="6:1" id="mII-EO-wl4"/>
                                         </constraints>
                                     </stackView>
@@ -490,6 +540,7 @@
                         <outlet property="megaPickContainerView" destination="Dwe-L1-eKr" id="NT3-Dk-W4W"/>
                         <outlet property="movieContainerView" destination="bXw-iu-AeH" id="2qc-Kq-Ghw"/>
                         <outlet property="movieListUIView" destination="ohX-A1-Nar" id="Eaf-3d-jEi"/>
+                        <outlet property="specialHallCollectionView" destination="Ixb-Wv-sVh" id="kIe-Uc-UZI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -28,6 +28,8 @@
 		D0CCE19A27D89B4B00B8675C /* MovieContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CCE19927D89B4B00B8675C /* MovieContainerView.swift */; };
 		D0D9C10C27D89FAE009ABE8D /* EventListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D9C10A27D89FAE009ABE8D /* EventListCollectionViewCell.swift */; };
 		D0D9C10D27D89FAE009ABE8D /* EventListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D9C10B27D89FAE009ABE8D /* EventListCollectionViewCell.xib */; };
+		D0D9C11127D8B86A009ABE8D /* SpecialHallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D9C10F27D8B86A009ABE8D /* SpecialHallCollectionViewCell.swift */; };
+		D0D9C11227D8B86A009ABE8D /* SpecialHallCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D9C11027D8B86A009ABE8D /* SpecialHallCollectionViewCell.xib */; };
 		D0DE901327D6DF4600AD671E /* BoxOfficeContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE901227D6DF4600AD671E /* BoxOfficeContainerView.swift */; };
 		D0DE901527D6DF6C00AD671E /* ComingSoonContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE901427D6DF6C00AD671E /* ComingSoonContainerView.swift */; };
 		D0DE901A27D6EAE600AD671E /* HashTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DE901827D6EAE600AD671E /* HashTagCollectionViewCell.swift */; };
@@ -59,6 +61,8 @@
 		D0CCE19927D89B4B00B8675C /* MovieContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieContainerView.swift; sourceTree = "<group>"; };
 		D0D9C10A27D89FAE009ABE8D /* EventListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0D9C10B27D89FAE009ABE8D /* EventListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventListCollectionViewCell.xib; sourceTree = "<group>"; };
+		D0D9C10F27D8B86A009ABE8D /* SpecialHallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialHallCollectionViewCell.swift; sourceTree = "<group>"; };
+		D0D9C11027D8B86A009ABE8D /* SpecialHallCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpecialHallCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0DE901227D6DF4600AD671E /* BoxOfficeContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeContainerView.swift; sourceTree = "<group>"; };
 		D0DE901427D6DF6C00AD671E /* ComingSoonContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonContainerView.swift; sourceTree = "<group>"; };
 		D0DE901827D6EAE600AD671E /* HashTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashTagCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 				D0DE901C27D6EAE900AD671E /* HashTag */,
 				D07D4D5F27D70BF700FBE138 /* MovieList */,
 				D0D9C10E27D89FB3009ABE8D /* Event List */,
+				D0D9C11327D8B86E009ABE8D /* Special Hall */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -205,6 +210,15 @@
 				D0D9C10B27D89FAE009ABE8D /* EventListCollectionViewCell.xib */,
 			);
 			path = "Event List";
+			sourceTree = "<group>";
+		};
+		D0D9C11327D8B86E009ABE8D /* Special Hall */ = {
+			isa = PBXGroup;
+			children = (
+				D0D9C10F27D8B86A009ABE8D /* SpecialHallCollectionViewCell.swift */,
+				D0D9C11027D8B86A009ABE8D /* SpecialHallCollectionViewCell.xib */,
+			);
+			path = "Special Hall";
 			sourceTree = "<group>";
 		};
 		D0DE901627D6DF7200AD671E /* ContainerView */ = {
@@ -304,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0DE901B27D6EAE600AD671E /* HashTagCollectionViewCell.xib in Resources */,
+				D0D9C11227D8B86A009ABE8D /* SpecialHallCollectionViewCell.xib in Resources */,
 				D0A30F8927D5E48B00E243E1 /* LaunchScreen.storyboard in Resources */,
 				D0A30F9427D5F11900E243E1 /* EventCollectionViewCell.xib in Resources */,
 				D07D4D5E27D70BF400FBE138 /* MovieListCollectionViewCell.xib in Resources */,
@@ -367,6 +382,7 @@
 				D0A30F9727D5F54C00E243E1 /* Model.swift in Sources */,
 				D07D4D5D27D70BF400FBE138 /* MovieListCollectionViewCell.swift in Sources */,
 				D0DE901A27D6EAE600AD671E /* HashTagCollectionViewCell.swift in Sources */,
+				D0D9C11127D8B86A009ABE8D /* SpecialHallCollectionViewCell.swift in Sources */,
 				D07D4D5A27D709FB00FBE138 /* MainContainerVC.swift in Sources */,
 				D0A30F8127D5E48A00E243E1 /* ViewController.swift in Sources */,
 				D0DE901327D6DF4600AD671E /* BoxOfficeContainerView.swift in Sources */,

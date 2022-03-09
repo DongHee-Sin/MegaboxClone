@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var eventListModel: EventList = EventList()
     var hashTagModel: HashTagList = HashTagList()
     var eventTagModel: EventTagList = EventTagList()
+    var specialHallModel: SpecialHallList = SpecialHallList()
     
     
     
@@ -41,6 +42,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var megaPickContainerView: UIView!
     @IBOutlet weak var movieContainerView: UIView!
     
+    
+    // 특별관 컬렉션뷰
+    @IBOutlet weak var specialHallCollectionView: UICollectionView!
+
     
     
     // MARK: - container view 연결
@@ -82,6 +87,12 @@ class ViewController: UIViewController {
         eventTagCollectionView.delegate = self
         eventTagCollectionView.dataSource = self
         eventTagCollectionView.register(UINib(nibName: "HashTagCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HashTagCollectionViewCell")
+        
+        // 특별관 컬렉션뷰 설정
+        specialHallCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        collectionViewSetting(specialHallCollectionView, nib: "SpecialHallCollectionViewCell")
+        specialHallCollectionView.collectionViewLayout = createCompositionalLayout()
+        
         
         
         // API 데이터를 가져오는 함수 (탈출 클로저로 값이 넘어오면 CollectionView 리로드)
@@ -154,6 +165,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         if collectionView == eventTagCollectionView {
             return eventTagModel.count
         }
+        if collectionView == specialHallCollectionView {
+            return specialHallModel.count
+        }
         
         return 1
     }
@@ -191,9 +205,21 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
             }
             return cell
         }
+        // 특별관 컬렉션뷰
+        if collectionView == specialHallCollectionView {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SpecialHallCollectionViewCell", for: indexPath) as? SpecialHallCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell.updateCell(specialHallModel.getSpecialHallInfo(indexPath.row))
+            
+            return cell
+        }
+        
+        
         
         return UICollectionViewCell()
     }
+    
     
     // 셀이 선택되면 컨테이너뷰 isHidden 컨트롤
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

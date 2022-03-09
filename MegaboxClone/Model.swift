@@ -110,3 +110,29 @@ struct MoviePosterList {
         return storage[index]
     }
 }
+
+
+
+
+struct SpecialHallList {
+    private var imageStorage: [String] = []
+    private var textStorage: [String] = []
+    
+    init() {
+        imageStorage = [
+            "특별1.png", "특별2.png", "특별3.png", "특별4.png", "특별5.png"
+        ]
+        
+        textStorage = [
+            "Dolby Cinema", "THE BOUTIQUE", "MX", "COMFORT", "MEGABOX KIDS"
+        ]
+    }
+    
+    var count: Int {
+        return imageStorage.count
+    }
+    
+    func getSpecialHallInfo(_ index: Int) -> [String] {
+        return [imageStorage[index], textStorage[index]]
+    }
+}
