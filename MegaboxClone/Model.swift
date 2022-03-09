@@ -46,3 +46,67 @@ struct HashTagList {
         return storage[index]
     }
 }
+
+
+
+struct EventTagList {
+    private var storage: [String] = []
+    
+    init() {
+        storage = [
+            "메가Pick", "영화", "극장", "제휴/할인", "시사회/무대인사"
+        ]
+    }
+    
+    var count: Int {
+        return storage.count
+    }
+    
+    func getEventTag(_ index: Int) -> String {
+        return storage[index]
+    }
+}
+
+
+
+
+struct MegaPickPosterList {
+    private var storage: [String] = []
+    
+    init() {
+        storage = [
+            // 이미지 문자열
+            "매가 금빛.jpeg", "매가 배트맨.jpeg", "매가 투표.jpeg", "매가 BTS.jpeg"
+        ]
+    }
+    
+    var count: Int {
+        return storage.count
+    }
+    
+    func getPosterImage(_ index: Int) -> String {
+        return storage[index]
+    }
+}
+
+
+
+
+struct MoviePosterList {
+    private var storage: [String] = []
+    
+    init() {
+        storage = [
+            // 이미지 문자열
+            "영화 스펜서.jpeg", "영화 유어러브송.jpeg", "영화 인류멸망.jpeg", "영화 정성일.jpeg"
+        ]
+    }
+    
+    var count: Int {
+        return storage.count
+    }
+    
+    func getPosterImage(_ index: Int) -> String {
+        return storage[index]
+    }
+}

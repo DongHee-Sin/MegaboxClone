@@ -11,14 +11,10 @@ import Alamofire
 
 class ViewController: UIViewController {
     
-    // api값 넘어왔는지 확인할 버튼
-    @IBAction func testButton(_ sender: UIButton) {
-        print(MovieRequest.apiData?.count)
-    }
-    
     // MARK: - Model 연결
     var eventListModel: EventList = EventList()
     var hashTagModel: HashTagList = HashTagList()
+    var eventTagModel: EventTagList = EventTagList()
     
     
     
@@ -33,10 +29,17 @@ class ViewController: UIViewController {
     // 영화 리스트 상단 라운딩 주려고 연결
     @IBOutlet weak var movieListUIView: UIView!
     
-    // 컨테이너 뷰
+    // 박스오피스/상영예정 컨테이너 뷰
     @IBOutlet weak var boxOfficeContainerView: UIView!
     @IBOutlet weak var comingSoonContainerView: UIView!
     
+
+    // 이벤트 태그 리스트
+    @IBOutlet weak var eventTagCollectionView: UICollectionView!
+    
+    // 매가픽 / 영화 컨테이너 뷰
+    @IBOutlet weak var megaPickContainerView: UIView!
+    @IBOutlet weak var movieContainerView: UIView!
     
     
     
@@ -74,6 +77,12 @@ class ViewController: UIViewController {
         hashTagCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionViewSetting(hashTagCollectionView, nib: "HashTagCollectionViewCell")
 
+        // 이벤트 태그 컬렉션뷰 설정
+        eventTagCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        eventTagCollectionView.delegate = self
+        eventTagCollectionView.dataSource = self
+        eventTagCollectionView.register(UINib(nibName: "HashTagCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "HashTagCollectionViewCell")
+        
         
         // API 데이터를 가져오는 함수 (탈출 클로저로 값이 넘어오면 CollectionView 리로드)
         MovieRequest().getMovieData(completion: { [weak self] in
@@ -130,47 +139,6 @@ class ViewController: UIViewController {
 
 
 
-
-
-
-
-
-
-// MARK: - API 데이터 받아오기
-//extension ViewController {
-//    func getMovieData() {
-//        let url = "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=b4d2c860bdd937f0186339b3082437a1&targetDt=20220301"
-//
-//        let params: Parameters = [
-//            "key": "b4d2c860bdd937f0186339b3082437a1",
-//            "targetDt": 20220301
-//        ]
-//
-//        // HTTP Method: Get
-//        AF.request(url,
-//                   method: .get,
-//                   parameters: params,
-//                   headers: nil)
-//            .responseDecodable(of: MovieResponse.self) { response in
-//                switch response.result {
-//                case .success(let response):
-//                    print("박스오피스 정보 가져오기 성공")
-//                    self.boxOfficeData = response.boxOfficeResult.dailyBoxOfficeList
-//
-//                case .failure(let error):
-//                    print("실패 = \(error.localizedDescription)")
-//                }
-//            }
-//
-//    }
-//}
-
-
-
-
-
-
-
 // MARK: - CollectionView 프로토콜 채택
 
 // 하나의 VC내부에 여러 collectionView가 들어오니까 조건문을 통해 구분 적용
@@ -182,6 +150,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         }
         if collectionView == hashTagCollectionView {
             return hashTagModel.count
+        }
+        if collectionView == eventTagCollectionView {
+            return eventTagModel.count
         }
         
         return 1
@@ -196,11 +167,24 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
             cell.updateCell(eventListModel.getEventData(indexPath.row))
             return cell
         }
+        // 해시태그 컬렉션뷰
         if collectionView == hashTagCollectionView {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HashTagCollectionViewCell", for: indexPath) as? HashTagCollectionViewCell else {
                 return UICollectionViewCell()
             }
             cell.updateCell(hashTagModel.getHashTag(indexPath.row))
+            if indexPath.row == 0 {
+                cell.isSelected = true
+                collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .init())
+            }
+            return cell
+        }
+        // 이벤트 태그 컬렉션뷰
+        if collectionView == eventTagCollectionView {
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HashTagCollectionViewCell", for: indexPath) as? HashTagCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell.updateCell(eventTagModel.getEventTag(indexPath.row))
             if indexPath.row == 0 {
                 cell.isSelected = true
                 collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .init())
@@ -213,14 +197,25 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     // 셀이 선택되면 컨테이너뷰 isHidden 컨트롤
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("\(indexPath.row)번째 셀 선택되었슴")
+        print("\(indexPath.row)번째 셀 선택")
         // 여기서 스위치로 0번째가 눌리면 컨테이너뷰 히든 트루펄스 설정해주면 될듯
-        if indexPath.row == 0 {
-            boxOfficeContainerView.isHidden = false
-            comingSoonContainerView.isHidden = true
-        }else {
-            boxOfficeContainerView.isHidden = true
-            comingSoonContainerView.isHidden = false
+        if collectionView == hashTagCollectionView {
+            if indexPath.row == 0 {
+                boxOfficeContainerView.isHidden = false
+                comingSoonContainerView.isHidden = true
+            }else {
+                boxOfficeContainerView.isHidden = true
+                comingSoonContainerView.isHidden = false
+            }
+        }
+        if collectionView == eventTagCollectionView {
+            if indexPath.row == 0 {
+                megaPickContainerView.isHidden = false
+                movieContainerView.isHidden = true
+            }else {
+                megaPickContainerView.isHidden = true
+                movieContainerView.isHidden = false
+            }
         }
     }
 }
