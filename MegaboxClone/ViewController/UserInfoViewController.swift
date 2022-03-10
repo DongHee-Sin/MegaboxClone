@@ -18,18 +18,15 @@ class UserInfoViewController: MainViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        // 하위 컨테이너뷰에 self 할당
-        guard let containerVC = storyboard?.instantiateViewController(withIdentifier: "BeforeLoginContainerView") as? BeforeLoginContainerView else {
-            return
-        }
-        containerVC.userInfoViewController = self
+        navigationController?.isNavigationBarHidden = true
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         // 사용자의 로그인 여부에 따라 다른 ContainerView 보여주기
-        if isUserLogin {
+        print(#function)
+        print("디버깅포인트")
+        if MainViewController.isUserLogin {
             beforeLoginContainerView.isHidden = true
             afterLoginContainerView.isHidden = false
         }else {

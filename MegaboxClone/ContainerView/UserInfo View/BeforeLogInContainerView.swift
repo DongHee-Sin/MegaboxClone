@@ -22,14 +22,8 @@ class BeforeLoginContainerView: UserInfoContainerVC {
         guard let loginVC = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
             return
         }
-        
-        guard let userInfoVC = self.userInfoViewController else {
-            return
-        }
-        
-        loginVC.userInfoViewController = userInfoVC
-        
-        self.present(loginVC, animated: true, completion: nil)
+        // 여기서 네비게이션 컨트롤러로 뷰 전환하기
+        self.navigationController?.pushViewController(loginVC, animated: false)
     }
     
     

@@ -654,7 +654,7 @@
             </objects>
             <point key="canvasLocation" x="3294" y="98"/>
         </scene>
-        <!--MY-->
+        <!--User Info View Controller-->
         <scene sceneID="OSD-Zi-qaD">
             <objects>
                 <viewController storyboardIdentifier="UserInfoViewController" id="pJy-HT-FK4" customClass="UserInfoViewController" customModule="MegaboxClone" customModuleProvider="target" sceneMemberID="viewController">
@@ -663,7 +663,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbF-9m-Ewu" userLabel="Header">
-                                <rect key="frame" x="0.0" y="44" width="414" height="63.5"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="63.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barcode.viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9a6-v4-Kyd">
                                         <rect key="frame" x="15" y="20" width="25" height="23.5"/>
@@ -733,13 +733,13 @@
                                 </constraints>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="keI-1p-yDe" userLabel="로그인 전">
-                                <rect key="frame" x="0.0" y="107.5" width="414" height="705.5"/>
+                                <rect key="frame" x="0.0" y="151.5" width="414" height="661.5"/>
                                 <connections>
                                     <segue destination="yFY-WU-qjZ" kind="embed" id="Svf-YH-MCd"/>
                                 </connections>
                             </containerView>
                             <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Krn-tR-Oyx" userLabel="로그인 후">
-                                <rect key="frame" x="0.0" y="107.5" width="414" height="705.5"/>
+                                <rect key="frame" x="0.0" y="151.5" width="414" height="661.5"/>
                                 <connections>
                                     <segue destination="wvj-k0-2X5" kind="embed" id="1Ip-YZ-lhw"/>
                                 </connections>
@@ -761,7 +761,7 @@
                             <constraint firstItem="vfE-5n-Qol" firstAttribute="trailing" secondItem="gbF-9m-Ewu" secondAttribute="trailing" id="zft-NM-hgs"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MY" image="person" catalog="system" selectedImage="person.fill" id="Hf3-kf-zjm"/>
+                    <navigationItem key="navigationItem" id="pPr-If-5kR"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="afterLoginContainerView" destination="Krn-tR-Oyx" id="DAi-5Z-B6E"/>
@@ -770,7 +770,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uSW-dY-FUf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4114" y="98"/>
+            <point key="canvasLocation" x="5023.188405797102" y="97.767857142857139"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wH2-7A-pyg">
@@ -788,7 +788,7 @@
                         <segue destination="Kf6-HZ-8Ka" kind="relationship" relationship="viewControllers" id="ykL-Dx-gRh"/>
                         <segue destination="3ku-y7-rsI" kind="relationship" relationship="viewControllers" id="UlR-BN-9Pw"/>
                         <segue destination="bAL-ER-EhB" kind="relationship" relationship="viewControllers" id="dHj-pL-4Ro"/>
-                        <segue destination="pJy-HT-FK4" kind="relationship" relationship="viewControllers" id="r2Y-xp-jF0"/>
+                        <segue destination="kHb-JH-lax" kind="relationship" relationship="viewControllers" id="r2Y-xp-jF0"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qss-RJ-6U1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -962,11 +962,11 @@
             <objects>
                 <viewController storyboardIdentifier="BeforeLoginContainerView" id="yFY-WU-qjZ" customClass="BeforeLoginContainerView" customModule="MegaboxClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Quf-Vt-BIL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="705.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="661.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9E5-xQ-aLG">
-                                <rect key="frame" x="0.0" y="44" width="414" height="661.5"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="617.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vJ6-jR-xw1">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1004"/>
@@ -1141,7 +1141,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jNX-bB-cKM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3673.913043478261" y="745.3125"/>
+            <point key="canvasLocation" x="4658" y="745"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="XYZ-ln-Nye">
@@ -1397,14 +1397,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKr-hV-60X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3666.666666666667" y="1333.9285714285713"/>
+            <point key="canvasLocation" x="4659" y="1363"/>
         </scene>
         <!--After Login Container View-->
         <scene sceneID="4gf-GO-332">
             <objects>
                 <viewController storyboardIdentifier="AfterLoginContainerView" id="wvj-k0-2X5" customClass="AfterLoginContainerView" customModule="MegaboxClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C5T-m7-6NT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="705.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="661.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="TX1-fM-P8f"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1412,7 +1412,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9z-BK-cPU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4630" y="746"/>
+            <point key="canvasLocation" x="5361" y="745"/>
+        </scene>
+        <!--MY-->
+        <scene sceneID="ka2-VY-QGA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kHb-JH-lax" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="MY" image="person" catalog="system" selectedImage="person.fill" id="Hf3-kf-zjm"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JX4-Q8-cMt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pJy-HT-FK4" kind="relationship" relationship="rootViewController" id="sHw-hf-RHa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wm9-3x-xfO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4113.04347826087" y="97.767857142857139"/>
         </scene>
     </scenes>
     <resources>

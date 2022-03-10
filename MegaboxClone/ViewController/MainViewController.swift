@@ -11,8 +11,8 @@ import UIKit
 class MainViewController: UIViewController {
     
     // 사용자 정보
-    var isUserLogin: Bool = false
-    var userNickName: String?
+    static var isUserLogin: Bool = false
+    static var userNickName: String = "사용자"
     
     
     override func viewDidLoad() {

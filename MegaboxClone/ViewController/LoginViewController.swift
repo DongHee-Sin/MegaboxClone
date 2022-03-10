@@ -18,7 +18,7 @@ class LoginViewController: MainViewController {
     
     // dismiss 버튼
     @IBAction func didTouchedXButton(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: false)
     }
     
     
@@ -36,14 +36,9 @@ class LoginViewController: MainViewController {
             
                let accessToken = oauthToken?.accessToken
                self.setUserInfo()
+               MainViewController.isUserLogin = true
                
-               print("왜 히든처리 안함?")
-               if let uesrInfoVC = self.userInfoViewController {
-                   uesrInfoVC.beforeLoginContainerView.isHidden = true
-                   uesrInfoVC.afterLoginContainerView.isHidden = false
-               }
-               
-               self.dismiss(animated: false, completion: nil)
+               self.navigationController?.popViewController(animated: false)
            }
         }
     }
@@ -58,9 +53,10 @@ class LoginViewController: MainViewController {
                 _ = user
                 // do something
                 if let nickName = user?.kakaoAccount?.profile?.nickname {
-                    self.userNickName = nickName
+                    MainViewController.userNickName = nickName
+                    print(MainViewController.userNickName)
                 }
-                self.isUserLogin = true
+                
             }
         }
     }
