@@ -29,13 +29,17 @@ class LoginViewController: MainViewController {
              print(error)
            }
            else {
-            print("loginWithKakaoAccount() success.")
+               print("loginWithKakaoAccount() success.")
             
-            //do something
-            _ = oauthToken
+               //do something
+               _ = oauthToken
             
 //               let accessToken = oauthToken?.accessToken
+               
+               // 사용자 닉네임을 가져오면 동작할 내용 작성
                self.setUserInfo()
+               
+               // 로그인 상태 : true
                MainViewController.isUserLogin = true
                
                self.navigationController?.popViewController(animated: false)
@@ -43,8 +47,9 @@ class LoginViewController: MainViewController {
         }
     }
 
+    
     func setUserInfo() {
-        UserApi.shared.me() { (user, error) in
+        UserApi.shared.me() { [weak self] (user, error) in
             if let error = error {
                 print(error)
             }else {
@@ -55,6 +60,9 @@ class LoginViewController: MainViewController {
                 if let nickName = user?.kakaoAccount?.profile?.nickname {
                     MainViewController.userNickName = nickName
                     print(MainViewController.userNickName)
+                    
+                    // VC 3번 넘겨서 오기
+                    self!.userInfoViewController?.afterVC?.userInfoLabel.text = "\(nickName)님은 일반등급입니다."
                 }
                 
             }
