@@ -29,6 +29,11 @@
 		D0A30F9327D5F11900E243E1 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A30F9127D5F11900E243E1 /* EventCollectionViewCell.swift */; };
 		D0A30F9427D5F11900E243E1 /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0A30F9227D5F11900E243E1 /* EventCollectionViewCell.xib */; };
 		D0A30F9727D5F54C00E243E1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A30F9627D5F54C00E243E1 /* Model.swift */; };
+		D0C51CDA27DA308A006A9423 /* StoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C51CD827DA308A006A9423 /* StoreCollectionViewCell.swift */; };
+		D0C51CDB27DA308A006A9423 /* StoreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C51CD927DA308A006A9423 /* StoreCollectionViewCell.xib */; };
+		D0C7BB5D27DA2C6500AFD8FB /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C7BB5B27DA2C6500AFD8FB /* CollectionReusableView.swift */; };
+		D0C7BB5E27DA2C6500AFD8FB /* CollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C7BB5C27DA2C6500AFD8FB /* CollectionReusableView.xib */; };
+		D0C7BB6127DA2CE600AFD8FB /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C7BB6027DA2CE600AFD8FB /* StoreViewController.swift */; };
 		D0CCE19727D89B2500B8675C /* MegaPickContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CCE19627D89B2500B8675C /* MegaPickContainerView.swift */; };
 		D0CCE19A27D89B4B00B8675C /* MovieContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0CCE19927D89B4B00B8675C /* MovieContainerView.swift */; };
 		D0D9C10C27D89FAE009ABE8D /* EventListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D9C10A27D89FAE009ABE8D /* EventListCollectionViewCell.swift */; };
@@ -67,6 +72,11 @@
 		D0A30F9127D5F11900E243E1 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0A30F9227D5F11900E243E1 /* EventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0A30F9627D5F54C00E243E1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D0C51CD827DA308A006A9423 /* StoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCollectionViewCell.swift; sourceTree = "<group>"; };
+		D0C51CD927DA308A006A9423 /* StoreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreCollectionViewCell.xib; sourceTree = "<group>"; };
+		D0C7BB5B27DA2C6500AFD8FB /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
+		D0C7BB5C27DA2C6500AFD8FB /* CollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionReusableView.xib; sourceTree = "<group>"; };
+		D0C7BB6027DA2CE600AFD8FB /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		D0CCE19627D89B2500B8675C /* MegaPickContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaPickContainerView.swift; sourceTree = "<group>"; };
 		D0CCE19927D89B4B00B8675C /* MovieContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieContainerView.swift; sourceTree = "<group>"; };
 		D0D9C10A27D89FAE009ABE8D /* EventListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -134,6 +144,7 @@
 				D0610AD827D8E9E500BD4192 /* UserInfoViewController.swift */,
 				D043C61227D8EEA600DC9FD7 /* LoginViewController.swift */,
 				D00E805927D984FF00C57D17 /* MainViewController.swift */,
+				D0C7BB6027DA2CE600AFD8FB /* StoreViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -209,8 +220,36 @@
 				D07D4D5F27D70BF700FBE138 /* MovieList */,
 				D0D9C10E27D89FB3009ABE8D /* Event List */,
 				D0D9C11327D8B86E009ABE8D /* Special Hall */,
+				D0C51CDD27DA309A006A9423 /* Store List */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		D0C51CDC27DA308E006A9423 /* Store Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D0C51CD827DA308A006A9423 /* StoreCollectionViewCell.swift */,
+				D0C51CD927DA308A006A9423 /* StoreCollectionViewCell.xib */,
+			);
+			path = "Store Cell";
+			sourceTree = "<group>";
+		};
+		D0C51CDD27DA309A006A9423 /* Store List */ = {
+			isa = PBXGroup;
+			children = (
+				D0C7BB5F27DA2C8A00AFD8FB /* CollectionViewHeader */,
+				D0C51CDC27DA308E006A9423 /* Store Cell */,
+			);
+			path = "Store List";
+			sourceTree = "<group>";
+		};
+		D0C7BB5F27DA2C8A00AFD8FB /* CollectionViewHeader */ = {
+			isa = PBXGroup;
+			children = (
+				D0C7BB5B27DA2C6500AFD8FB /* CollectionReusableView.swift */,
+				D0C7BB5C27DA2C6500AFD8FB /* CollectionReusableView.xib */,
+			);
+			path = CollectionViewHeader;
 			sourceTree = "<group>";
 		};
 		D0CCE19827D89B3100B8675C /* 영화 */ = {
@@ -348,10 +387,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C51CDB27DA308A006A9423 /* StoreCollectionViewCell.xib in Resources */,
 				D0DE901B27D6EAE600AD671E /* HashTagCollectionViewCell.xib in Resources */,
 				D0D9C11227D8B86A009ABE8D /* SpecialHallCollectionViewCell.xib in Resources */,
 				D0A30F8927D5E48B00E243E1 /* LaunchScreen.storyboard in Resources */,
 				D0A30F9427D5F11900E243E1 /* EventCollectionViewCell.xib in Resources */,
+				D0C7BB5E27DA2C6500AFD8FB /* CollectionReusableView.xib in Resources */,
 				D07D4D5E27D70BF400FBE138 /* MovieListCollectionViewCell.xib in Resources */,
 				D0A30F8627D5E48B00E243E1 /* Assets.xcassets in Resources */,
 				D0A30F8427D5E48A00E243E1 /* Main.storyboard in Resources */,
@@ -417,11 +458,14 @@
 				D0DE901A27D6EAE600AD671E /* HashTagCollectionViewCell.swift in Sources */,
 				D0D9C11127D8B86A009ABE8D /* SpecialHallCollectionViewCell.swift in Sources */,
 				D07D4D5A27D709FB00FBE138 /* MainContainerVC.swift in Sources */,
+				D0C7BB5D27DA2C6500AFD8FB /* CollectionReusableView.swift in Sources */,
+				D0C7BB6127DA2CE600AFD8FB /* StoreViewController.swift in Sources */,
 				D0A30F8127D5E48A00E243E1 /* ViewController.swift in Sources */,
 				D0DE901327D6DF4600AD671E /* BoxOfficeContainerView.swift in Sources */,
 				D043C61327D8EEA600DC9FD7 /* LoginViewController.swift in Sources */,
 				D0A30F9327D5F11900E243E1 /* EventCollectionViewCell.swift in Sources */,
 				D0CCE19727D89B2500B8675C /* MegaPickContainerView.swift in Sources */,
+				D0C51CDA27DA308A006A9423 /* StoreCollectionViewCell.swift in Sources */,
 				D0DE901527D6DF6C00AD671E /* ComingSoonContainerView.swift in Sources */,
 				D0D9C10C27D89FAE009ABE8D /* EventListCollectionViewCell.swift in Sources */,
 				D073C64727D6322D00900D04 /* MovieResponse.swift in Sources */,

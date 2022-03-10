@@ -136,3 +136,25 @@ struct SpecialHallList {
         return [imageStorage[index], textStorage[index]]
     }
 }
+
+
+
+
+struct ProductModel {
+    private var storage: [String] = []
+    
+    init() {
+        storage = [
+            // 이미지 문자열
+            "코카콜라굿즈.jpeg", "패밀리패키지.jpeg", "일반티켓.jpeg", "부티크티켓.jpeg", "부티크스위트티켓.jpeg", "돌비티켓.jpeg", "러브콤보.jpeg"
+        ]
+    }
+    
+    var count: Int {
+        return storage.count
+    }
+    
+    func getProductImage(_ index: Int) -> String {
+        return storage[index]
+    }
+}
