@@ -8,17 +8,26 @@
 import Foundation
 import UIKit
 
-class BeforeLoginContainerView: UIViewController {
+class BeforeLoginContainerView: UserInfoContainerVC {
     
     // UI연결
     @IBOutlet weak var view1: UIView!
     @IBOutlet weak var view2: UIView!
     
     
+    // 
+    
+    
     @IBAction func didTouchedLoginButton(_ sender: UIButton) {
         guard let loginVC = storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else {
             return
         }
+        
+        guard let userInfoVC = self.userInfoViewController else {
+            return
+        }
+        
+        loginVC.userInfoViewController = userInfoVC
         
         self.present(loginVC, animated: true, completion: nil)
     }
@@ -30,6 +39,7 @@ class BeforeLoginContainerView: UIViewController {
         
         viewSetting(view1)
         viewSetting(view2)
+        
     }
     
     

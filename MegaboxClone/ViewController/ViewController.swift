@@ -10,7 +10,7 @@ import Alamofire
 
 
 
-class ViewController: UIViewController {
+class ViewController: MainViewController {
     
     // MARK: - Model 연결
     var eventListModel: EventList = EventList()

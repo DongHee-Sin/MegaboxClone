@@ -7,20 +7,27 @@
 
 import UIKit
 
-class UserInfoViewController: UIViewController {
-    
-    // 사용자가 로그인 상태인지 확인하는 Bool
-    var isUserLogin: Bool = false
-    
+class UserInfoViewController: MainViewController {
     
     // 컨테이너 뷰
     @IBOutlet weak var beforeLoginContainerView: UIView!
     @IBOutlet weak var afterLoginContainerView: UIView!
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        // 하위 컨테이너뷰에 self 할당
+        guard let containerVC = storyboard?.instantiateViewController(withIdentifier: "BeforeLoginContainerView") as? BeforeLoginContainerView else {
+            return
+        }
+        containerVC.userInfoViewController = self
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
         // 사용자의 로그인 여부에 따라 다른 ContainerView 보여주기
         if isUserLogin {
             beforeLoginContainerView.isHidden = true

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		231C830FC8F622083474D3A7 /* Pods_MegaboxClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 421621177413B7A275974091 /* Pods_MegaboxClone.framework */; };
+		D00E805A27D984FF00C57D17 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E805927D984FF00C57D17 /* MainViewController.swift */; };
+		D00E805C27D9905500C57D17 /* UserInfoContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00E805B27D9905500C57D17 /* UserInfoContainerVC.swift */; };
 		D01374CB27D7A5CD00570B79 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01374CA27D7A5CD00570B79 /* SearchResponse.swift */; };
 		D01374CD27D7A5E200570B79 /* SearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01374CC27D7A5E200570B79 /* SearchRequest.swift */; };
 		D043C60F27D8EB7C00DC9FD7 /* AfterLoginContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D043C60E27D8EB7C00DC9FD7 /* AfterLoginContainerView.swift */; };
@@ -43,6 +45,8 @@
 /* Begin PBXFileReference section */
 		421621177413B7A275974091 /* Pods_MegaboxClone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MegaboxClone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C9B6B048F1D06E04AD60E82 /* Pods-MegaboxClone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MegaboxClone.debug.xcconfig"; path = "Target Support Files/Pods-MegaboxClone/Pods-MegaboxClone.debug.xcconfig"; sourceTree = "<group>"; };
+		D00E805927D984FF00C57D17 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D00E805B27D9905500C57D17 /* UserInfoContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoContainerVC.swift; sourceTree = "<group>"; };
 		D01374CA27D7A5CD00570B79 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		D01374CC27D7A5E200570B79 /* SearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequest.swift; sourceTree = "<group>"; };
 		D043C60E27D8EB7C00DC9FD7 /* AfterLoginContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterLoginContainerView.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 			children = (
 				D08D764127D8E11B00799197 /* BeforeLogInContainerView.swift */,
 				D043C60E27D8EB7C00DC9FD7 /* AfterLoginContainerView.swift */,
+				D00E805B27D9905500C57D17 /* UserInfoContainerVC.swift */,
 			);
 			path = "UserInfo View";
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 				D0A30F8027D5E48A00E243E1 /* ViewController.swift */,
 				D0610AD827D8E9E500BD4192 /* UserInfoViewController.swift */,
 				D043C61227D8EEA600DC9FD7 /* LoginViewController.swift */,
+				D00E805927D984FF00C57D17 /* MainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -406,7 +412,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D043C60F27D8EB7C00DC9FD7 /* AfterLoginContainerView.swift in Sources */,
+				D00E805A27D984FF00C57D17 /* MainViewController.swift in Sources */,
 				D01374CB27D7A5CD00570B79 /* SearchResponse.swift in Sources */,
+				D00E805C27D9905500C57D17 /* UserInfoContainerVC.swift in Sources */,
 				D0CCE19A27D89B4B00B8675C /* MovieContainerView.swift in Sources */,
 				D0A30F9727D5F54C00E243E1 /* Model.swift in Sources */,
 				D07D4D5D27D70BF400FBE138 /* MovieListCollectionViewCell.swift in Sources */,

@@ -12,6 +12,7 @@ pod 'Tabman', '~> 2.9'
 pod 'KakaoSDKCommon'
 pod 'KakaoSDKAuth'
 pod 'KakaoSDKUser'
+pod 'KakaoSDKTalk'
 
 
 

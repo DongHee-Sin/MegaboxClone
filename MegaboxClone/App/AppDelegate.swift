@@ -7,6 +7,7 @@
 
 import UIKit
 import KakaoSDKCommon
+import KakaoSDKAuth
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         // iOS SDK 초기화 코드
-        KakaoSDK.initSDK(appKey: "${NATIVE_APP_KEY}")
+        KakaoSDK.initSDK(appKey: "1ba5a72373756a588938fc8c56449b57")
         
         return true
     }

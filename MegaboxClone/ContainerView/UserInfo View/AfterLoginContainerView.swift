@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AfterLoginContainerView: UIViewController {
+class AfterLoginContainerView: UserInfoContainerVC {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
