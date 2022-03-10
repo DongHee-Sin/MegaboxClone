@@ -34,7 +34,7 @@ class LoginViewController: MainViewController {
             //do something
             _ = oauthToken
             
-               let accessToken = oauthToken?.accessToken
+//               let accessToken = oauthToken?.accessToken
                self.setUserInfo()
                MainViewController.isUserLogin = true
                

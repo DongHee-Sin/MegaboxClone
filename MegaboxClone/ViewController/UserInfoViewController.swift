@@ -24,8 +24,6 @@ class UserInfoViewController: MainViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         // 사용자의 로그인 여부에 따라 다른 ContainerView 보여주기
-        print(#function)
-        print("디버깅포인트")
         if MainViewController.isUserLogin {
             beforeLoginContainerView.isHidden = true
             afterLoginContainerView.isHidden = false

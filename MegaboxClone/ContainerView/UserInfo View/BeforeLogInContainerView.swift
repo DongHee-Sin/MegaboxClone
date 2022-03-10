@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class BeforeLoginContainerView: UserInfoContainerVC {
+class BeforeLoginContainerView: MainViewController {
     
     // UI연결
     @IBOutlet weak var view1: UIView!
@@ -39,6 +39,6 @@ class BeforeLoginContainerView: UserInfoContainerVC {
     
     // view 세팅 함수
     func viewSetting(_ view: UIView) {
-        view.layer.cornerRadius = 10
+        view.layer.cornerRadius = view.frame.height / 3
     }
 }

@@ -18,4 +18,13 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    
+    
+    // UI 함수
+    func addBorderRadiusToUIView(_ view: UIView, radiusSize: CGFloat, borderColor: CGColor) {
+        view.layer.cornerRadius = radiusSize
+        view.layer.borderColor = borderColor
+        view.layer.borderWidth = 1
+    }
 }
