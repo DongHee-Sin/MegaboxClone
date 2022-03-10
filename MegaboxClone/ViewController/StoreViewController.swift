@@ -9,6 +9,10 @@ import UIKit
 
 class StoreViewController: MainViewController {
     
+    // cell 사이즈 변수
+    let sectionInsets = UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5)
+    
+    
     // UI 연결
     @IBOutlet weak var storeCollectionView: UICollectionView!
     
@@ -21,6 +25,8 @@ class StoreViewController: MainViewController {
         super.viewDidLoad()
         
         // 컬렉션뷰 설정
+        storeCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        storeCollectionView.collectionViewLayout = createCompositionalLayout()
         storeCollectionView.delegate = self
         storeCollectionView.dataSource = self
         storeCollectionView.register(UINib(nibName: "StoreCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "StoreCollectionViewCell")
@@ -30,17 +36,26 @@ class StoreViewController: MainViewController {
 
 
 
+
+
+
+// MARK: - Delegate, Datasource 프로토콜 채택
 extension StoreViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         productModel.count
     }
     
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoreCollectionViewCell", for: indexPath) as? StoreCollectionViewCell else {
             return UICollectionViewCell()
         }
+        
+        cell.cellUpdate(productModel.getProductImage(indexPath.row))
+        
         return cell
     }
+    
     
     
     // 컬렉션뷰 헤더 설정
@@ -52,5 +67,34 @@ extension StoreViewController: UICollectionViewDataSource, UICollectionViewDeleg
             return UICollectionReusableView()
         }
     }
+}
+
+
+
+
+
+
+// MARK: - DelegateFlowLayout 프로토콜 채택 : Header 높이 설정
+extension StoreViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.width*1.7)
+    }
+    
+        
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            let width = collectionView.frame.width
+            let height = collectionView.frame.width * 4
+            let itemsPerRow: CGFloat = 2
+            let widthPadding = sectionInsets.left * (itemsPerRow + 1)
+            let itemsPerColumn: CGFloat = 4
+            let heightPadding = sectionInsets.top * (itemsPerColumn + 1)
+            let cellWidth = (width - widthPadding) / itemsPerRow
+            let cellHeight = (height - heightPadding) / itemsPerColumn
+            
+            return CGSize(width: cellWidth, height: cellHeight)
+            
+        }
+    
 }
 
