@@ -21,6 +21,10 @@ class MovieListCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
 
+        backgroundUIView.layer.cornerRadius = 10
+        addShadow(backgroundUIView, color: UIColor.black.cgColor, width: 0.5, height: 1, alpha: 0.1, radius: 5)
+        
+        addRadiusToUIViewTop(posterImage, radiusSize: 10)
         
         // 버튼 설정
         reservationButton.layer.cornerRadius = 10
@@ -47,24 +51,19 @@ class MovieListCollectionViewCell: UICollectionViewCell {
     
     
     
-    // 셀 그림자+둥글게 설정 (안먹히네)
-    func setupLayout() {
-        backgroundUIView.layer.borderColor = UIColor.darkGray.cgColor
-        backgroundUIView.layer.borderWidth = 1
-        backgroundUIView.layer.shadowColor = UIColor.black.cgColor
-        backgroundUIView.layer.shadowOpacity = 0.5
-        backgroundUIView.layer.shadowRadius = 10
-        
-        contentView.layer.cornerRadius = 10
-        contentView.layer.masksToBounds = true
-        
-        layer.cornerRadius = 10
-        layer.masksToBounds = false
-        
-        layer.shadowRadius = 10
-        layer.shadowColor = UIColor.black.cgColor
-        layer.shadowOpacity = 0.5
-        layer.shadowOffset = CGSize(width: 0, height: 5)
+    // 그림자 넣기
+    func addShadow(_ to: UIView, color: CGColor, width: CGFloat, height: CGFloat, alpha: Float, radius: CGFloat) {
+            to.layer.shadowColor = color
+            to.layer.shadowOpacity = alpha
+            to.layer.shadowRadius = radius
+            to.layer.shadowOffset = CGSize(width: width, height: height)
+            to.layer.shadowPath = nil
+    }
+    
+    // 위에만 둥글게
+    func addRadiusToUIViewTop(_ view: UIView, radiusSize: CGFloat) {
+        view.layer.cornerRadius = radiusSize
+        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
 
 }
