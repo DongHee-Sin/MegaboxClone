@@ -21,12 +21,18 @@ class DetailInfoViewController: MainViewController {
     @IBOutlet weak var pointLabel: UILabel!
     
     
+    // 위쪽만 Radius
+    @IBOutlet weak var forRadiusView2: UIView!
+    
+    
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Radius 추가
+        addRadiusToUIViewTop(forRadiusView2, radiusSize: 20)
         addRadiusToUIView(toRadiusView, radiusSize: 20)
         
         

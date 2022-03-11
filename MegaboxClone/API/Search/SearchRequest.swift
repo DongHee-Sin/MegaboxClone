@@ -38,7 +38,6 @@ class SearchRequest {
                            parameters: params,
                            headers: headers)
                     .responseDecodable(of: SearchResponse.self) { response in
-                        // 여기서 네트워크 문제 발생 -> The request timed out
                         switch response.result {
                         case .success(let response):
                             // SearchRequest.imageString 배열에 포스터 이미지 값이 순서대로 저장되지 않는 오류 발생

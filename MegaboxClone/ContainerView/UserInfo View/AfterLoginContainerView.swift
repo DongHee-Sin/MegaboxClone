@@ -13,24 +13,13 @@ class AfterLoginContainerView: MainViewController {
     @IBOutlet weak var radiusView1: UIView!
     @IBOutlet weak var radiusView2: UIView!
     
+    @IBOutlet weak var radiusView3: UIView!
+    
+    
     @IBOutlet weak var borderView1: UIView!
     @IBOutlet weak var borderView2: UIView!
     
     @IBOutlet weak var pointUIView: UIView!
-    
-    
-    
-    // 사용자 이름과 등급을 나타내는 text
-//    var userNickName: String? {
-//        didSet {
-//            userInfoLabel.text = userNickName!
-//        }
-//    }
-    
-    // textLabel을 변경하는 함수
-//    func updateLabel(_ nickName: String) {
-//        self.userInfoLabel.text = nickName
-//    }
     
     @IBOutlet weak var userInfoLabel: UILabel!
     
@@ -49,6 +38,7 @@ class AfterLoginContainerView: MainViewController {
         addBorderRadiusToUIView(borderView1, radiusSize: 0, borderColor: UIColor.lightGray.cgColor)
         addBorderRadiusToUIView(borderView2, radiusSize: 0, borderColor: UIColor.lightGray.cgColor)
         addBorderRadiusToUIView(pointUIView, radiusSize: 10, borderColor: UIColor.systemGray6.cgColor)
+        addRadiusToUIView(radiusView3, radiusSize: radiusView3.frame.height/2)
         
         
         addShadow(pointUIView, color: UIColor.black.cgColor, width: 2, height: 5, alpha: 0.3, radius: 30)

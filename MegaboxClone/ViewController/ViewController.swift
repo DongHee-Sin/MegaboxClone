@@ -121,7 +121,7 @@ class ViewController: MainViewController {
         
         
         // 영화 리스트들 위쪽만 Radius주기
-        addRadiusToUIViewTop(hashTagCollectionView, radiusSize: 15)
+        addRadiusToUIViewTop(hashTagCollectionView, radiusSize: 20)
         
         
         // 유저정보 버튼 addTarget & 네이게이션 설정
