@@ -29,8 +29,10 @@ class DetailInfoViewController: MainViewController {
         
         addRadiusToUIView(toRadiusView, radiusSize: 20)
         
-        userNickName.text = "\(MainViewController.userNickName)님"
-        pointLabel.text = DecimalPoint(value: userModel.getUserInfo(1).point)
+        
+        let loginUserInfo: UserInfo = userModel.getUserInfo(MainViewController.userNickName)
+        userNickName.text = "\(loginUserInfo.userName)님"
+        pointLabel.text = DecimalPoint(value: loginUserInfo.point)
     }
     
     override func viewWillAppear(_ animated: Bool) {

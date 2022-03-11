@@ -61,8 +61,14 @@ class LoginViewController: MainViewController {
                     MainViewController.userNickName = nickName
                     print(MainViewController.userNickName)
                     
+                    
+                    // 로그인된 유저 정보 가져오기
+                    let loginUserInfo: UserInfo = self!.userModel.getUserInfo(MainViewController.userNickName)
+                    
+                    
                     // VC 3번 넘겨서 오기
-                    self!.userInfoViewController?.afterVC?.userInfoLabel.text = "\(nickName)님은 일반등급입니다."
+                    self!.userInfoViewController?.afterVC?.userInfoLabel.text = "\(loginUserInfo.userName)님은 \(loginUserInfo.rating.rawValue)입니다."
+                    self!.userInfoViewController?.afterVC?.userPointLabel.text = self!.DecimalPoint(value: loginUserInfo.point)
                 }
                 
             }

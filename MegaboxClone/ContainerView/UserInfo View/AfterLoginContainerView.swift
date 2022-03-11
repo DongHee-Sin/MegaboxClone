@@ -28,11 +28,13 @@ class AfterLoginContainerView: MainViewController {
 //    }
     
     // textLabel을 변경하는 함수
-    func updateLabel(_ nickName: String) {
-        self.userInfoLabel.text = nickName
-    }
+//    func updateLabel(_ nickName: String) {
+//        self.userInfoLabel.text = nickName
+//    }
     
     @IBOutlet weak var userInfoLabel: UILabel!
+    
+    @IBOutlet weak var userPointLabel: UILabel!
     
     
     

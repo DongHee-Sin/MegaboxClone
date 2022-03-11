@@ -167,9 +167,13 @@ struct ProductModel {
 struct UserList {
     private var storage: [Int: UserInfo]
     
+    var userKey: [String: Int] = [
+        "신동희": 1
+    ]
+    
     init() {
         storage = [
-            1: UserInfo(userName: "신동희", point: 1550)
+            1: UserInfo(userName: "신동희", point: 1550, rating: .일반)
         ]
     }
     
@@ -177,8 +181,8 @@ struct UserList {
         return storage.count
     }
     
-    func getUserInfo(_ key: Int) -> UserInfo {
-        return storage[key] ?? UserInfo(userName: "홍길동", point: 0)
+    func getUserInfo(_ userName: String) -> UserInfo {
+        return storage[userKey[userName] ?? 0] ?? UserInfo(userName: "OOO", point: 0, rating: .일반)
     }
 }
 
@@ -195,4 +199,12 @@ struct UserList {
 struct UserInfo {
     var userName: String
     var point: Int
+    var rating: Rating
+}
+
+
+enum Rating: String {
+    case 일반 = "일반등급"
+    case VIP = "VIP"
+    case VVIP = "VVIP"
 }

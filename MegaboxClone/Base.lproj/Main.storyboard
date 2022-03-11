@@ -1222,8 +1222,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7O-TK-sbh" userLabel="포인트 &amp; 쿠폰">
                                 <rect key="frame" x="0.0" y="107.5" width="414" height="128"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="b67-KI-3zK">
-                                        <rect key="frame" x="15" y="10" width="218.5" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="b67-KI-3zK">
+                                        <rect key="frame" x="15" y="10" width="242.5" height="30"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bc0-yL-pdT">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
@@ -1243,7 +1243,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vZ7-Ay-ytb">
-                                                <rect key="frame" x="52" y="0.0" width="62.5" height="30"/>
+                                                <rect key="frame" x="60" y="0.0" width="62.5" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 P" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTi-ea-2KM">
                                                         <rect key="frame" x="0.0" y="0.0" width="62.5" height="30"/>
@@ -1260,7 +1260,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zwh-A4-3iv">
-                                                <rect key="frame" x="116.5" y="0.0" width="50" height="30"/>
+                                                <rect key="frame" x="132.5" y="0.0" width="50" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쿠폰" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZcQ-nj-tTM">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
@@ -1277,7 +1277,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGO-P5-XDh">
-                                                <rect key="frame" x="168.5" y="0.0" width="50" height="30"/>
+                                                <rect key="frame" x="192.5" y="0.0" width="50" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 장" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDc-Lc-NK9">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
@@ -3419,6 +3419,7 @@
                         <outlet property="radiusView1" destination="hEl-me-vnj" id="fPh-wD-gwK"/>
                         <outlet property="radiusView2" destination="mIn-F4-OTR" id="8WP-Xj-GoM"/>
                         <outlet property="userInfoLabel" destination="nLI-Cb-8I5" id="CFZ-u0-nQX"/>
+                        <outlet property="userPointLabel" destination="4RV-2P-BNN" id="2wu-u2-OYY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9z-BK-cPU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
