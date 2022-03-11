@@ -30,6 +30,7 @@
 		D0A30F9427D5F11900E243E1 /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0A30F9227D5F11900E243E1 /* EventCollectionViewCell.xib */; };
 		D0A30F9727D5F54C00E243E1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A30F9627D5F54C00E243E1 /* Model.swift */; };
 		D0B4795827DAF327007A4FB1 /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4795727DAF327007A4FB1 /* ReservationViewController.swift */; };
+		D0B4795A27DB0DF9007A4FB1 /* MobileOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B4795927DB0DF9007A4FB1 /* MobileOrderViewController.swift */; };
 		D0C51CDA27DA308A006A9423 /* StoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C51CD827DA308A006A9423 /* StoreCollectionViewCell.swift */; };
 		D0C51CDB27DA308A006A9423 /* StoreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C51CD927DA308A006A9423 /* StoreCollectionViewCell.xib */; };
 		D0C7BB5D27DA2C6500AFD8FB /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C7BB5B27DA2C6500AFD8FB /* CollectionReusableView.swift */; };
@@ -74,6 +75,7 @@
 		D0A30F9227D5F11900E243E1 /* EventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0A30F9627D5F54C00E243E1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D0B4795727DAF327007A4FB1 /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
+		D0B4795927DB0DF9007A4FB1 /* MobileOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileOrderViewController.swift; sourceTree = "<group>"; };
 		D0C51CD827DA308A006A9423 /* StoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCollectionViewCell.swift; sourceTree = "<group>"; };
 		D0C51CD927DA308A006A9423 /* StoreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreCollectionViewCell.xib; sourceTree = "<group>"; };
 		D0C7BB5B27DA2C6500AFD8FB /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				D00E805927D984FF00C57D17 /* MainViewController.swift */,
 				D0C7BB6027DA2CE600AFD8FB /* StoreViewController.swift */,
 				D0B4795727DAF327007A4FB1 /* ReservationViewController.swift */,
+				D0B4795927DB0DF9007A4FB1 /* MobileOrderViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				D0DE901527D6DF6C00AD671E /* ComingSoonContainerView.swift in Sources */,
 				D0D9C10C27D89FAE009ABE8D /* EventListCollectionViewCell.swift in Sources */,
 				D073C64727D6322D00900D04 /* MovieResponse.swift in Sources */,
+				D0B4795A27DB0DF9007A4FB1 /* MobileOrderViewController.swift in Sources */,
 				D0A30F7D27D5E48A00E243E1 /* AppDelegate.swift in Sources */,
 				D08D764227D8E11B00799197 /* BeforeLogInContainerView.swift in Sources */,
 				D01374CD27D7A5E200570B79 /* SearchRequest.swift in Sources */,
