@@ -197,7 +197,7 @@
                                                         </constraints>
                                                     </view>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="BHZ-u1-XUN" firstAttribute="top" secondItem="kNm-dG-zD8" secondAttribute="bottom" id="5Cj-s5-WFj"/>
                                                     <constraint firstItem="kNm-dG-zD8" firstAttribute="leading" secondItem="ohX-A1-Nar" secondAttribute="leading" id="7Yo-e8-htK"/>
@@ -553,6 +553,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
+                                        <color key="backgroundColor" red="0.37254901959999998" green="0.23137254900000001" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="9Lr-7X-wpW" firstAttribute="width" secondItem="9Lr-7X-wpW" secondAttribute="height" multiplier="2.7:1" id="4Ek-bm-ZW7"/>
                                             <constraint firstItem="YKF-Ff-DFH" firstAttribute="width" secondItem="YKF-Ff-DFH" secondAttribute="height" multiplier="16:10" id="AgT-MC-fwg"/>
@@ -1107,6 +1108,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wyy-1a-HnP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2473.913043478261" y="97.767857142857139"/>
+        </scene>
+        <!--Detail Info View Controller-->
+        <scene sceneID="MQW-3k-b8U">
+            <objects>
+                <viewController storyboardIdentifier="DetailInfoViewController" id="9S6-0z-NOB" customClass="DetailInfoViewController" customModule="MegaboxClone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LWE-Dd-OJN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Mnp-jD-KTZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RHe-Bj-VU9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2715" y="923"/>
         </scene>
         <!--모바일오더-->
         <scene sceneID="nw0-IQ-3Fa">
@@ -2222,13 +2238,13 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영화관람권" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuG-aw-VF0">
-                                                                        <rect key="frame" x="17" y="49.5" width="61" height="17"/>
+                                                                        <rect key="frame" x="16.5" y="49.5" width="61" height="17"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwP-1w-hmS">
-                                                                        <rect key="frame" x="42" y="71.5" width="11" height="20.5"/>
+                                                                        <rect key="frame" x="41.5" y="71.5" width="11" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -2256,13 +2272,13 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="스토어교환권" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBn-1K-3gz">
-                                                                        <rect key="frame" x="11" y="49.5" width="73" height="17"/>
+                                                                        <rect key="frame" x="10.5" y="49.5" width="73" height="17"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeH-BL-dRN">
-                                                                        <rect key="frame" x="42" y="71.5" width="11" height="20.5"/>
+                                                                        <rect key="frame" x="41.5" y="71.5" width="11" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -2324,13 +2340,13 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영화관람권" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxj-58-yim">
-                                                                        <rect key="frame" x="16.5" y="49.5" width="61" height="17"/>
+                                                                        <rect key="frame" x="17" y="49.5" width="61" height="17"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLT-V0-Hof">
-                                                                        <rect key="frame" x="41.5" y="71.5" width="11" height="20.5"/>
+                                                                        <rect key="frame" x="42" y="71.5" width="11" height="20.5"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>

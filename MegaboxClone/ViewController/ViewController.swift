@@ -114,14 +114,13 @@ class ViewController: MainViewController {
             
         })
         
-    }
-    
-    
-    
-    // MARK: - View Will Appear
-    override func viewWillAppear(_ animated: Bool) {
+        
+        // 영화 리스트들 위쪽만 Radius주기
+        addRadiusToUIViewTop(hashTagCollectionView, radiusSize: 15)
+        
         
     }
+    
     
     
     

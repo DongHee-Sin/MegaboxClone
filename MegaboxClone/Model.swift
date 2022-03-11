@@ -8,7 +8,8 @@
 import Foundation
 
 
-// MARK: - 이벤트 리스트 모델
+// MARK: - Model
+
 struct EventList {
     private var storage: [String] = []
     
@@ -157,4 +158,41 @@ struct ProductModel {
     func getProductImage(_ index: Int) -> String {
         return storage[index]
     }
+}
+
+
+
+
+
+struct UserList {
+    private var storage: [Int: UserInfo]
+    
+    init() {
+        storage = [
+            1: UserInfo(userName: "신동희", point: 1550)
+        ]
+    }
+    
+    var count: Int {
+        return storage.count
+    }
+    
+    func getUserInfo(_ key: Int) -> UserInfo {
+        return storage[key] ?? UserInfo(userName: "홍길동", point: 0)
+    }
+}
+
+
+
+
+
+
+
+
+
+// MARK: - Data Type
+
+struct UserInfo {
+    var userName: String
+    var point: Int
 }

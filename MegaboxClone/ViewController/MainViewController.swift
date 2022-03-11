@@ -36,6 +36,15 @@ class MainViewController: UIViewController {
     }
     
     
+    
+    // 위에만 둥글게
+    func addRadiusToUIViewTop(_ view: UIView, radiusSize: CGFloat) {
+        view.layer.cornerRadius = radiusSize
+        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+    }
+    
+    
+    
     // 그림자
     func addShadow(_ to: UIView, color: CGColor, width: CGFloat, height: CGFloat, alpha: Float, radius: CGFloat) {
             to.layer.shadowColor = color
