@@ -48,6 +48,11 @@ class ViewController: MainViewController {
     @IBOutlet weak var specialHallCollectionView: UICollectionView!
 
     
+    // 유저정보 버튼
+    @IBOutlet weak var userInfoButton: UIButton!
+    
+    
+    
     
     // MARK: - container view 연결
     var boxOfficeContainerVC: BoxOfficeContainerView?
@@ -119,6 +124,9 @@ class ViewController: MainViewController {
         addRadiusToUIViewTop(hashTagCollectionView, radiusSize: 15)
         
         
+        // 유저정보 버튼 addTarget & 네이게이션 설정
+        navigationController?.isNavigationBarHidden = true
+        userInfoButton.addTarget(self, action: #selector(showUserDetail), for: .touchUpInside)
     }
     
     

@@ -13,7 +13,11 @@ class MobileOrderViewController: MainViewController {
     @IBOutlet weak var forRadius1: UIView!
     @IBOutlet weak var forRadius2: UIView!
     
+    @IBOutlet weak var userInfoButton: UIButton!
     
+    
+    
+    // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,5 +25,9 @@ class MobileOrderViewController: MainViewController {
         // Radius 설정
         addRadiusToUIView(forRadius1, radiusSize: 10)
         addRadiusToUIView(forRadius2, radiusSize: 10)
+        
+        
+        navigationController?.isNavigationBarHidden = true
+        userInfoButton.addTarget(self, action: #selector(showUserDetail), for: .touchUpInside)
     }
 }

@@ -20,6 +20,7 @@ class ReservationViewController: MainViewController {
     @IBOutlet weak var forShadow1: UIView!
     @IBOutlet weak var forShadow2: UIView!
     
+    @IBOutlet weak var userInfoButton: UIButton!
     
     
     
@@ -39,5 +40,9 @@ class ReservationViewController: MainViewController {
         addRadiusToUIView(forShadow2, radiusSize: 5)
         addShadow(forShadow1, color: UIColor.black.cgColor, width: 2, height: 5, alpha: 0.3, radius: 30)
         addShadow(forShadow2, color: UIColor.black.cgColor, width: 2, height: 5, alpha: 0.3, radius: 30)
+        
+        
+        navigationController?.isNavigationBarHidden = true
+        userInfoButton.addTarget(self, action: #selector(showUserDetail), for: .touchUpInside)
     }
 }

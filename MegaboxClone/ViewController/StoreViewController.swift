@@ -16,11 +16,17 @@ class StoreViewController: MainViewController {
     // UI 연결
     @IBOutlet weak var storeCollectionView: UICollectionView!
     
+    @IBOutlet weak var userInfoButton: UIButton!
+    
+    
+    
     
     // Model 연결
     var productModel: ProductModel = ProductModel()
     
     
+    
+    // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +37,10 @@ class StoreViewController: MainViewController {
         storeCollectionView.dataSource = self
         storeCollectionView.register(UINib(nibName: "StoreCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "StoreCollectionViewCell")
         storeCollectionView.register(UINib(nibName: "CollectionReusableView", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CollectionReusableView")
+        
+        
+        navigationController?.isNavigationBarHidden = true
+        userInfoButton.addTarget(self, action: #selector(showUserDetail), for: .touchUpInside)
     }
 }
 

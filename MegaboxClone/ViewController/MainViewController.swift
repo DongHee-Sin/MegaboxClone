@@ -12,7 +12,11 @@ class MainViewController: UIViewController {
     
     // 사용자 정보
     static var isUserLogin: Bool = false
-    static var userNickName: String = "사용자"
+    static var userNickName: String = "OOO"
+    
+    
+    // 사용자 Model
+    var userModel: UserList = UserList()
     
     
     override func viewDidLoad() {
@@ -53,4 +57,30 @@ class MainViewController: UIViewController {
             to.layer.shadowOffset = CGSize(width: width, height: height)
             to.layer.shadowPath = nil
         }
+    
+    
+    
+    
+    
+    // MARK: - 숫자 콤마찍어서 반환
+    func DecimalPoint(value: Int) -> String{
+            let numberFormatter = NumberFormatter()
+            numberFormatter.numberStyle = .decimal
+            let result = numberFormatter.string(from: NSNumber(value: value))! + "P"
+            return result
+    }
+    
+    
+    
+    
+    
+    
+    // MARK: - objc 함수
+    @objc func showUserDetail() {
+        guard let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailInfoViewController") as? DetailInfoViewController else {
+            return
+        }
+        
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
 }

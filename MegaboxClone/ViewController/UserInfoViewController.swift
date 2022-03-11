@@ -9,6 +9,10 @@ import UIKit
 
 class UserInfoViewController: MainViewController {
     
+    // UI 연결
+    @IBOutlet weak var userInfoButton: UIButton!
+    
+    
     // 컨테이너 뷰
     @IBOutlet weak var beforeLoginContainerView: UIView!
     @IBOutlet weak var afterLoginContainerView: UIView!
@@ -24,6 +28,8 @@ class UserInfoViewController: MainViewController {
         super.viewDidLoad()
         
         navigationController?.isNavigationBarHidden = true
+        
+        userInfoButton.addTarget(self, action: #selector(showUserDetail), for: .touchUpInside)
         
         beforeVC?.userInfoVC = self
     }
