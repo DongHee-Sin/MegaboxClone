@@ -48,5 +48,7 @@ class AfterLoginContainerView: MainViewController {
         addBorderRadiusToUIView(borderView2, radiusSize: 0, borderColor: UIColor.lightGray.cgColor)
         addBorderRadiusToUIView(pointUIView, radiusSize: 10, borderColor: UIColor.systemGray6.cgColor)
         
+        
+        addShadow(pointUIView, color: UIColor.black.cgColor, width: 2, height: 5, alpha: 0.3, radius: 30)
     }
 }

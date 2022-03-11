@@ -21,10 +21,27 @@ class MainViewController: UIViewController {
     
     
     
-    // UI 함수
+    // MARK: - UI 함수
+    
+    // 둥글게 + 테두리
     func addBorderRadiusToUIView(_ view: UIView, radiusSize: CGFloat, borderColor: CGColor) {
         view.layer.cornerRadius = radiusSize
         view.layer.borderColor = borderColor
         view.layer.borderWidth = 1
     }
+    
+    // 둥글게
+    func addRadiusToUIView(_ view: UIView, radiusSize: CGFloat) {
+        view.layer.cornerRadius = radiusSize
+    }
+    
+    
+    // 그림자
+    func addShadow(_ to: UIView, color: CGColor, width: CGFloat, height: CGFloat, alpha: Float, radius: CGFloat) {
+            to.layer.shadowColor = color
+            to.layer.shadowOpacity = alpha
+            to.layer.shadowRadius = radius
+            to.layer.shadowOffset = CGSize(width: width, height: height)
+            to.layer.shadowPath = nil
+        }
 }
