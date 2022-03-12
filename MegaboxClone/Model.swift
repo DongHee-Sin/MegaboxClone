@@ -205,6 +205,6 @@ struct UserInfo {
 
 enum Rating: String {
     case 일반 = "일반등급"
-    case ㅈVIP = "VIP"
+    case VIP = "VIP"
     case VVIP = "VVIP"
 }

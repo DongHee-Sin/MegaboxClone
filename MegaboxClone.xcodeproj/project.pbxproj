@@ -15,6 +15,7 @@
 		D043C61327D8EEA600DC9FD7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D043C61227D8EEA600DC9FD7 /* LoginViewController.swift */; };
 		D0585BD827DB87CF00E29BC2 /* MovieInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0585BD727DB87CF00E29BC2 /* MovieInfoViewController.swift */; };
 		D0610AD927D8E9E500BD4192 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0610AD827D8E9E500BD4192 /* UserInfoViewController.swift */; };
+		D06DEB5427DCD5280060292A /* UserInfoSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06DEB5327DCD5280060292A /* UserInfoSingleton.swift */; };
 		D073C64727D6322D00900D04 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D073C64627D6322D00900D04 /* MovieResponse.swift */; };
 		D073C64927D633F000900D04 /* MovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D073C64827D633F000900D04 /* MovieRequest.swift */; };
 		D07D4D5A27D709FB00FBE138 /* MainContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07D4D5927D709FB00FBE138 /* MainContainerVC.swift */; };
@@ -60,6 +61,7 @@
 		D043C61227D8EEA600DC9FD7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D0585BD727DB87CF00E29BC2 /* MovieInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoViewController.swift; sourceTree = "<group>"; };
 		D0610AD827D8E9E500BD4192 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		D06DEB5327DCD5280060292A /* UserInfoSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoSingleton.swift; sourceTree = "<group>"; };
 		D073C64627D6322D00900D04 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		D073C64827D633F000900D04 /* MovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRequest.swift; sourceTree = "<group>"; };
 		D07D4D5927D709FB00FBE138 /* MainContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainerVC.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				D01374C927D7A5A600570B79 /* Movie */,
 				D01374CE27D7A5E800570B79 /* Search */,
+				D06DEB5327DCD5280060292A /* UserInfoSingleton.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D043C60F27D8EB7C00DC9FD7 /* AfterLoginContainerView.swift in Sources */,
+				D06DEB5427DCD5280060292A /* UserInfoSingleton.swift in Sources */,
 				D00E805A27D984FF00C57D17 /* MainViewController.swift in Sources */,
 				D0B4795827DAF327007A4FB1 /* ReservationViewController.swift in Sources */,
 				D01374CB27D7A5CD00570B79 /* SearchResponse.swift in Sources */,
