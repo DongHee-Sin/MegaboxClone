@@ -47,4 +47,30 @@ extension BoxOfficeContainerView: UICollectionViewDelegate, UICollectionViewData
     }
     
     
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let movieVC = storyboard?.instantiateViewController(withIdentifier: "MovieInfoViewController") as? MovieInfoViewController else {
+            return
+        }
+        
+        let data = MovieRequest.apiData?[indexPath.row]
+        let movieTitle: String = data!.movieNm
+        
+        movieVC.loadView()
+        
+        movieVC.updateUI(url: SearchRequest.imageString[movieTitle]!,
+                         title: movieTitle,
+                         enTitle: SearchRequest.englishTitle[movieTitle]!,
+                         rank: data!.rnum,
+                         ratingP: SearchRequest.ratingPoint[movieTitle]!,
+                         openDT: data!.openDt,
+                         director: SearchRequest.directorName[movieTitle]!,
+                         actor: SearchRequest.actors[movieTitle]!,
+                         accAu: data!.audiAcc,
+                         dyAu: data!.audiCnt,
+                         auCh: data!.audiChange)
+        
+        
+        self.navigationController?.pushViewController(movieVC, animated: true)
+    }
 }

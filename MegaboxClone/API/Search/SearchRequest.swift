@@ -10,7 +10,21 @@ import Alamofire
 
 class SearchRequest {
     
+    // 이미지 URL 정보
     static var imageString: [String: String] = [:]
+    
+    // 영문 title
+    static var englishTitle: [String: String] = [:]
+    
+    // 평점
+    static var ratingPoint: [String: String] = [:]
+    
+    // 감독
+    static var directorName: [String: String] = [:]
+    
+    // 출연배우
+    static var actors: [String: String] = [:]
+    
     
     func getMovieData(movieTitles: [String], completion: @escaping()-> ()) {
         
@@ -40,12 +54,20 @@ class SearchRequest {
                     .responseDecodable(of: SearchResponse.self) { response in
                         switch response.result {
                         case .success(let response):
-                            // SearchRequest.imageString 배열에 포스터 이미지 값이 순서대로 저장되지 않는 오류 발생
-                            // request time out 에러는 단순 네트워크 오류인듯 -> 시간 지나고 다시 시도하니 잘 작동
-//                            if (SearchRequest.imageString?.append(response.items[0].image)) == nil {
-//                                SearchRequest.imageString = [response.items[0].image]
-//                            }
+                            // URL(이미지) 정보 저장
                             SearchRequest.imageString[eachTitle] = response.items[0].image
+                            
+                            // 영문 title 저장
+                            SearchRequest.englishTitle[eachTitle] = response.items[0].subtitle
+                            
+                            // 평점 저장
+                            SearchRequest.ratingPoint[eachTitle] = response.items[0].userRating
+                            
+                            // 감독과 출연배우
+                            SearchRequest.directorName[eachTitle] = response.items[0].director
+                            SearchRequest.actors[eachTitle] = response.items[0].actor
+                            
+                            
                             
                         case .failure(let error):
                             print("검색 실패: \(error.localizedDescription)")
