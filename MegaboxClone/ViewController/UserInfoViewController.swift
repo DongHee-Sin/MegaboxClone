@@ -6,8 +6,15 @@
 //
 
 import UIKit
+import KakaoSDKAuth
 
 class UserInfoViewController: MainViewController {
+    
+    // 토큰 존재 여부 확인하는 버튼 : hasToken()
+    @IBAction func userHasToken(_ sender: UIButton) {
+        print(AuthApi.hasToken())
+    }
+    
     
     // UI 연결
     @IBOutlet weak var userInfoButton: UIButton!

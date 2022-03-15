@@ -2038,16 +2038,28 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31O-Ak-e3a">
+                                        <rect key="frame" x="50" y="10" width="93" height="43.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="hasToken"/>
+                                        <connections>
+                                            <action selector="userHasToken:" destination="pJy-HT-FK4" eventType="touchUpInside" id="vlr-0G-AxQ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="n9N-zI-Mk2" firstAttribute="centerY" secondItem="gbF-9m-Ewu" secondAttribute="centerY" id="Dmi-eT-0pS"/>
                                     <constraint firstItem="n9N-zI-Mk2" firstAttribute="height" secondItem="gbF-9m-Ewu" secondAttribute="height" id="ExR-Fd-80I"/>
                                     <constraint firstItem="n9N-zI-Mk2" firstAttribute="width" secondItem="gbF-9m-Ewu" secondAttribute="width" multiplier="0.25" id="Hei-Jh-PeZ"/>
+                                    <constraint firstItem="31O-Ak-e3a" firstAttribute="top" secondItem="gbF-9m-Ewu" secondAttribute="top" constant="10" id="Lju-3Y-KVQ"/>
+                                    <constraint firstItem="31O-Ak-e3a" firstAttribute="leading" secondItem="9a6-v4-Kyd" secondAttribute="trailing" constant="10" id="O40-gM-OPr"/>
+                                    <constraint firstItem="0Sc-0O-YSF" firstAttribute="leading" secondItem="31O-Ak-e3a" secondAttribute="trailing" constant="10" id="ONp-mO-f9a"/>
                                     <constraint firstItem="9a6-v4-Kyd" firstAttribute="centerY" secondItem="gbF-9m-Ewu" secondAttribute="centerY" id="T52-Bp-pKK"/>
                                     <constraint firstAttribute="trailing" secondItem="n9N-zI-Mk2" secondAttribute="trailing" id="V7H-JO-gE3"/>
                                     <constraint firstItem="9a6-v4-Kyd" firstAttribute="leading" secondItem="gbF-9m-Ewu" secondAttribute="leading" constant="15" id="cwf-pk-UmF"/>
                                     <constraint firstItem="9a6-v4-Kyd" firstAttribute="width" secondItem="gbF-9m-Ewu" secondAttribute="width" multiplier="0.06" id="eVB-b8-C1j"/>
+                                    <constraint firstAttribute="bottom" secondItem="31O-Ak-e3a" secondAttribute="bottom" constant="10" id="hMS-9C-ZeU"/>
                                     <constraint firstItem="0Sc-0O-YSF" firstAttribute="centerX" secondItem="gbF-9m-Ewu" secondAttribute="centerX" id="sPs-90-B9p"/>
                                     <constraint firstAttribute="width" secondItem="gbF-9m-Ewu" secondAttribute="height" multiplier="6.5:1" id="tYI-hk-Mu4"/>
                                     <constraint firstItem="0Sc-0O-YSF" firstAttribute="centerY" secondItem="gbF-9m-Ewu" secondAttribute="centerY" id="uwm-OY-Pex"/>
@@ -2734,7 +2746,7 @@
             <objects>
                 <viewController storyboardIdentifier="BeforeLoginContainerView" id="yFY-WU-qjZ" customClass="BeforeLoginContainerView" customModule="MegaboxClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Quf-Vt-BIL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="661"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="661.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9E5-xQ-aLG">
@@ -3176,7 +3188,7 @@
             <objects>
                 <viewController storyboardIdentifier="AfterLoginContainerView" id="wvj-k0-2X5" customClass="AfterLoginContainerView" customModule="MegaboxClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C5T-m7-6NT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="661"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="661.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmf-gy-z0s">

@@ -24,27 +24,52 @@ class LoginViewController: MainViewController {
     
     // 카카오 소셜로그인 버튼
     @IBAction func didTouchedKakaoLoginButton(_ sender: UIButton) {
-        UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
-           if let error = error {
-             print(error)
-           }
-           else {
-               print("loginWithKakaoAccount() success.")
-            
-               //do something
-               _ = oauthToken
-            
-//               let accessToken = oauthToken?.accessToken
-               
-               // 사용자 닉네임을 가져오면 동작할 내용 작성
-               self.setUserInfo()
-               
-               // 로그인 상태 : true
-               MainViewController.isUserLogin = true
-               
-               self.navigationController?.popViewController(animated: false)
-           }
+        if (UserApi.isKakaoTalkLoginAvailable()) {
+            // 카톡이 있을 경우 이쪽 코드가 호출
+            UserApi.shared.loginWithKakaoTalk { (OAuthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    print("loginWithKakaoTalk() success.")
+                    
+                    _ = OAuthToken
+                    
+                    // 사용자 닉네임을 가져오면 동작할 내용 작성
+                    self.setUserInfo()
+                    
+                    // 로그인 상태 : true
+                    MainViewController.isUserLogin = true
+                    
+                    self.navigationController?.popViewController(animated: false)
+                }
+            }
         }
+        // 카톡이 없을 경우 else 구문 호출
+        else {
+            UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+               if let error = error {
+                 print(error)
+               }
+               else {
+                   print("loginWithKakaoAccount() success.")
+                
+                   //do something
+                   _ = oauthToken
+                
+    //               let accessToken = oauthToken?.accessToken
+                   
+                   // 사용자 닉네임을 가져오면 동작할 내용 작성
+                   self.setUserInfo()
+                   
+                   // 로그인 상태 : true
+                   MainViewController.isUserLogin = true
+                   
+                   self.navigationController?.popViewController(animated: false)
+               }
+            }
+        }
+        
     }
 
     
