@@ -23,3 +23,7 @@
 * 스토어 View
 * 예매 View
 * 모바일오더 View
+* MY View (로그인 전, 로그인 후)
+* 영화 정보 View
+* 유저 정보 View
+* 로그인 View
