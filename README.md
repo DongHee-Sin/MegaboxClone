@@ -1,6 +1,7 @@
 # 라이징캠프 5주차 과제
 #### 클론코딩한 앱 : 매가박스
 #### 기간: 2022/03/05 ~ 2022/03/12
+[실행영상](https://drive.google.com/file/d/1bkiEPNMFys355lHptO_duXp8v8Wn4L46/view?usp=sharing)
 
 <br/>
 
